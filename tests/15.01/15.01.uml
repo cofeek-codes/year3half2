@@ -1,0 +1,17 @@
+@startuml
+
+
+
+actor Пользователь as User
+
+usecase (Перекодировать файл) as RecodeFile
+usecase (Выбрать файл) as ChooseFile
+usecase (Выбрать формат кодировки) as ChooseEncodingFormat
+
+User --> ChooseEncodingFormat
+User --> ChooseFile
+User --> RecodeFile
+
+
+
+@enduml
