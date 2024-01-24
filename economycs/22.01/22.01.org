@@ -3,6 +3,7 @@
 #+DATE: \today
 #+LANGUAGE: ru
 #+LaTeX_HEADER: \usepackage[russian]{babel}
+#+LaTeX_HEADER: \usepackage{amsmath,graphicx}
 
 
 * Износ
@@ -24,7 +25,7 @@
 Постепенный перенос стоймости на ОФ на готовый продукт называется *Амортизацией* ($A$) \\
 
 Часть стоймости основных фондов, которая ежегодно переходит на готовый продукт называется *Амортизационными отчислениями*
-
+ 
 ** Амортизация за год
 
 #+begin_export latex
@@ -33,9 +34,20 @@ A = \frac{C_{n}*H_{a}}{100\%}
 \end{equation}
 #+end_export
 
-где 
+*где*
 
-$C_{n}$ - \\
-$H_{a}$ - \\
+#+begin_export latex
+\begin{flushleft}
+$C_{n}$ - первоначальная стоймость \\
+$H_{a}$ - норма амортизации за год \\
+\end{flushleft}
+#+end_export
 
-$H=\frac{l}{t_{э}}*100\%$
+# TODO: refert epsilon to get "э"
+
+#+begin_export latex
+\begin{equation}
+H=\frac{l}{t_{\epsilon}}*100\%  
+\end{equation}
+
+#+end_export
