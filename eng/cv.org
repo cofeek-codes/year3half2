@@ -1,0 +1,62 @@
+#+TITLE: Writing a CV
+#+AUTHOR: Kormyshev Egor ISiP-301
+#+DATE: \today
+
+* Task 1
+
+Three things i need in my cv:
+
+1) List of my professional skills
+2) Details about my education
+3) Interests
+
+* Task 2
+
+a - 4 \\
+b - 7 \\
+c - 8 \\
+d - 1 \\
+e - 5 \\
+f - 2 \\
+g - 6 \\
+h - 3
+
+* Task 3
+
+1) experience
+2) qualification 
+3) graduated
+4) trainee
+5) enthusiastic
+
+* Task 4
+
+I agreed with almost all rules.
+I the third rule i am not sure why list of jobs should be in reverse order. I don't think it matters.
+
+* Task 5
+
+I think Frantisek Svoboda i has the right qualifications for this job, but he can have problems because his level of Spanish is may not be enough to talk with clients with confidence
+
+* Task 6
+
+** Personal Information
+
+| Name          | Kormyshev Egor                         |
+| Address       | Bulvar Komsomolsky 63, Kamensk-Uralsky |
+| Telephone     | +79089046857                           |
+| E-mail        | kormyshev11@mail.ru                    |
+| Nationality   | Russian                                |
+| Date of Birth | 11th November 2004                     |
+
+** Personal Statement
+
+I am enthusiastic self-taught programmer who is looking for interesting job at IT-company
+
+** Education
+
+2021-25 Kamensk-Uralsky Politecnical College
+
+** Interests
+
+Computer games, football
