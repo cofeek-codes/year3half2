@@ -43,7 +43,7 @@ $H_{a}$ - норма амортизации за год \\
 \end{flushleft}
 #+end_export
 
-# TODO: refert epsilon to get "э"
+# TODO: revert epsilon to get "э"
 
 #+begin_export latex
 \begin{equation}
