@@ -194,7 +194,138 @@ ${P_{pasp}}$ - паспортная производительность
 
 #+begin_export latex
 \begin{equation}
-  K_{cm} = \frac{VP}{\bar{C}}
+  K_{\phi} = \frac{VP}{\bar{C}}
 \end{equation}
 #+end_export
 
+** Фондоемкость
+
+Обратный показатель фондоотдачи, показывает, сколько основных фондов по стоймости приходится на каждый рубль выпускаемой продукции
+
+
+#+begin_export latex
+\begin{equation}
+  K_{\phi'} = \frac{\bar{C}}{VP}; \ \phi' = \frac{1}{\phi}
+\end{equation}
+#+end_export
+
+
+** Фондовооружаемость
+
+#+begin_export latex
+\begin{equation}
+  K_{\phi''} = \frac{\bar{C}}{P_{c}}
+\end{equation}
+#+end_export
+
+* Решение задач
+** № 1 (14)
+
+Дано:
+
+ - $C_{n}$ = 8 млн. руб
+ - $\bar{C}$ - 400000 руб
+ - $P_{c}$ - 2000 чел
+
+Найти:
+
+- Ф - ?
+- Ф' - ?
+- Ф'' - ?
+
+ Решение:
+
+ #+begin_export latex
+ \begin{math}
+	\phi = \frac{VP}{\bar{C}} \\
+	\phi = \frac{8000000000}{400000} = 20 \\
+	\phi' = \frac{1}{20} = 0,05 \\
+	\phi'' = \frac{\bar{c}}{P_{c}} \\
+	\phi'' = \frac{400000}{2000} = 200 
+ \end{math}
+ #+end_export
+ 
+
+** № 2 (15)
+
+Дано:
+
+ - $C_{n}$ = 9500 тыс. руб
+ - $\bar{C}$ - 800000 руб
+ - $P_{c}$ - 23 чел
+ - $C_{vv}$ = 400000
+ - VP = 20700 тыс руб
+
+Найти:
+
+- $Ф$ - ?
+- $Ф'$ - ?
+- $Ф''$ - ?
+
+ Решение:
+
+ #+begin_export latex
+ \begin{math}
+
+  % formula
+
+ C_{k} = C_{m} + C_{vv} - C_{vib}
+ C_{k} = 9500 + 400 - 800 = 9100
+
+ \phi = \frac{VP}{\bar{C}} \\
+ \phi = \frac{20700}{9100} = 2,27 \\
+ \phi' = \frac{1}{2,27} = 0,44 \\
+ \phi'' = \frac{\bar{c}}{P_{c}} \\
+ \phi'' = \frac{9100}{23} = 395,65
+ \end{math}
+ #+end_export
+  
+
+
+
+
+** № 4 (17)
+
+Дано:
+- $C_{n}$ = 348 тыс руб
+- $A$ = 48 тыс руб
+Найти:
+
+- $K_{g}$ = ?
+- $K_{u}$ = ?
+
+ Решение:
+
+ #+begin_export latex
+ \begin{math}
+ K_{u} = \frac{48}{348} = 0,14 \\
+ K_{g} = 1 - K_{u} \\
+ K_{g} = 1 - 0,14 = 0,86
+ \end{math}
+ #+end_export
+  
+
+
+** № 5 (18)
+
+
+** № 6 (19)
+
+Дано:
+- $C_{n}$ = 493,3 тыс руб
+- $C_{vib}$ = 51 тыс руб (1.11)
+- $C_{bb}$ = 65,1 тыс руб
+- $C_{vib}$ = 34,8 тыс руб (1.12)
+
+Найти:
+
+- $\bar{C}$ = ?
+
+ Решение:
+
+ #+begin_export latex
+ \begin{math}
+ \bar{C} = 493,3 + \frac{65,1*10}{12} - \frac{51*(12-10)}{12} - \frac{34,8(12-11)}{12} = 493,3 + 54,25 - 8,5 - 2,9 = 536,15
+  \end{math}
+ #+end_export
+  
