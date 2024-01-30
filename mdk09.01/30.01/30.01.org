@@ -30,9 +30,9 @@
 
 * Архитектура CMS
 #+CAPTION: схема работы над CMS
-[[./pic.svg]]
+[[./pic.png]]
 #+CAPTION: Архитектура CMS
-[[./architecture.svg]]
+[[./architecture.png]]
 
 * Примеры CMS
 
