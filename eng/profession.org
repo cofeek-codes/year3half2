@@ -1,8 +1,8 @@
 #+TITLE: My Future Profession
-#+AUTHOR: Kormyshev Egor ISap-301
+#+AUTHOR: Kormyshev Egor ISaP-301
 #+DATE: \today
 
-I would like to tell you about programming as my future profession
+I would like to tell you about programming as my future profession.
 
 The ability to create software that can solve complex problems and enhance human experiences is both fascinating and deeply rewarding. Programming is not just about writing code; it is a blend of logical thinking, problem-solving skills, and creativity that fuels innovation.
 
