@@ -1,0 +1,30 @@
+#+TITLE: What is a computer?
+#+AUTHOR: Kormyshev Egor 
+#+DATE: 16th of February
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+* Vocabulary
+
+- characters - символы
+- data - данные
+- decision - решение
+- device - устройство
+- hardware - оборудование
+- instruction - команда
+- intelligence - разум
+- manner - манера
+- microwave - микроволновка
+- procedures - процедуры
+- purpose - цель
+- raw - необработанный, сырой
+- to come to life - оживать
+- to connect - соединять
+- to convert - превращять, преобразовывать
+- to create - создавать
+- to evaluate - оценивать (получать значение)
+- to refer to as - называть ч-л
+- to refine - очищять
+- to respond - отвечать
+- transmission - передача
+- various - различные

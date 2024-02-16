@@ -1,0 +1,9 @@
+#+TITLE: Choosing a Career as a Computer Programmer
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+Graduating from college is a major milestone.
+
+And for me it is also a big step in my life that opens a lot of roads for my future.
+
+I chose a way of computer programmer because I am enjoying the process of working with a computer and also there are exellent job prospects for a well-educated programmers with relevant experience and a passion to their work
