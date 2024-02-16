@@ -2,6 +2,6 @@
 #+LANGUAGE: ru
 #+LaTeX_HEADER: \usepackage[russian]{babel}
 
-Ultimately, my goal is to contribute to the field of programming in a way that pushes boundaries and drives forward the next generation of digital solutions. Whether it's through developing new features, optimizing existing systems, or pioneering new technologies, I aim to use my skills to make a positive impact on society and the environment.
+Ultimately, my goal is to contribute to the field of programming in a way that pushes boundaries and drives forward the next generation of digital solutions. Whether it's through developing new features optimizing existing systems or pioneering new technologies I aim to use my skills to make a positive impact on society and the environment.
 
-I am graduating next year and after a college i want to work as a freelancer or in IT company
+Next year I will graduate and after a college I want to work as a freelancer or in IT company
