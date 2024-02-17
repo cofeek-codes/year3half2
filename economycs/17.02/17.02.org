@@ -1,0 +1,73 @@
+#+TITLE: Задачи
+#+AUTHOR: Кормышев Егор
+#+DATE: \today
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+* Задача 1
+
+** Дано
+
+#+begin_export latex
+ПР{\text{вал}} = 10 млн руб \\
+OC{\text{н}} = 9 млн руб \\
+\text{РП} = 14000 руб \\
+\text{ПР} = 2000 руб \\
+\text{Д} = 6д \\
+#+end_export
+
+** Найти
+
+#+begin_export latex
+В = ?
+#+end_export
+
+** Решение
+
+#+begin_export latex
+ O(В) = O_{\text{c 0-14}} - O_{\text{c баз}} \\
+ O_{\text{c баз}} = ПФ * (1 - a_{\text{фф}}) = 2000\text{тр} * (1-0,6) = 800тр \\
+ O_{c \text{отч}} = \frac{C_{\text{реал}}}{C_{\text{отч}}} \\
+ O_{\text{отч}} = 360 / D_{\text{отч}} \\
+ С_{\text{реал}} = 14000 - 2000 = 12000 \\
+ \Delta D_{\text{отч}} = D_{\text{баз}} - D_{\text{отч}} = 24 - 6 = 18 \\
+ D_{\text{баз}} = С_{\text{реал}} / O_{\text{баз}} = 360 / 15 = 24 \\
+ O_{\text{баз}} = С_{\text{реал}} = \frac{12000}{800} = 15 \\
+ O_{\text{отч}}  = \frac{12000}{20} = 600
+#+end_export
+
+# unfinished
+
+* Задача 2
+** Дано
+#+begin_export latex
+\text{РП{\text{баз}}} = 9 \text{млн руб} \\
+\text{О{\text{баз}}} = 0,4 \text{млн руб} \\
+\text{РП{\text{отч}}} = 10,35 \text{млн руб} \\
+\text{ОС{\text{баз}}} = 0,46 \text{млн руб}
+#+end_export
+
+
+* Задача 6
+** Дано
+#+begin_export latex
+РП = 25 млн р \\
+ОС = 1500 тыс р \\
+\Delta D = 3 дня \\
+#+end_export
+** Найти
+#+begin_export latex
+В - ?
+#+end_export
+** Решение
+#+begin_export latex
+\begin{math}
+  D = \frac{T}{K\text{об}} \\
+  К\text{об} = \frac{\text{РП}}{\text{ОС}} \\
+  К\text{об_{1}} = \frac{\text{РП_{1}}}{\text{ОС_{1}}} = \frac{25\text{млн}}{1500\text{тыс руб}} = 16,67 \\
+  D_{1} = \frac{T}{K\text{об_{1}}} = \frac{360}{16,67} = 21,6 = 22 \\
+  К\text{об_{2}} = \frac{\text{РП_{1}}}{\text{ОС_{1}}} = \frac{25\text{млн}}{1500\text{тыс руб}} = 16,67 \\
+  
+  
+\end{math}
+#+end_export
