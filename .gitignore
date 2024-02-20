@@ -13,3 +13,4 @@
 *.cb
 *.cb2
 .*.lb
+vendor/

@@ -1,0 +1,104 @@
+#+TITLE: Модульное тустирование (Unit Tests)
+#+AUTHOR: Кормышев
+#+DATE: \today
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+
+*phpUnit* - unit-тесты на php
+
+Установка через /composer/ или архивом
+
+
+* Установка PHPUnit
+
+=composer require --dev phpunit/phpunit=
+
+* Примеры тестов
+
+Код: \\
+
+#+begin_src php
+  <?php
+
+class Calc
+{
+
+
+    function add($x, $y)
+    {
+        return $x + $y;
+    }
+
+
+    function sub($x, $y)
+    {
+        return $x - $y;
+    }
+
+    function mul($x, $y)
+    {
+        return $x * $y;
+    }
+
+    function dev($x, $y)
+    {
+        return $x / $y;
+    }
+}
+
+#+end_src
+
+Тест: \\
+
+#+begin_src php
+  <?php
+
+use PHPUnit\Framework\TestCase;
+
+require "Calc.php";
+
+
+
+class CalcTest extends TestCase
+{
+
+    public function testAdd()
+    {
+        $calc = new Calc();
+
+        $res = $calc->add(1, 2);
+
+        $this->assertEquals(3, $res);
+    }
+
+
+    public function testSub()
+    {
+        $calc = new Calc();
+
+        $res = $calc->sub(1, 2);
+
+        $this->assertEquals(-1, $res);
+    }
+    public function testMul()
+    {
+        $calc = new Calc();
+
+        $res = $calc->mul(1, 2);
+
+        $this->assertEquals(2, $res);
+    }
+}
+
+#+end_src
+
+* Виды =Assert=
+
+- =AssertTrue= / =AssertFalse= - true/false
+- =AssertEquals= - ==
+- =AssertGreaterThan= - >
+- =AssertLessThan= - <
+- =AssertContains= - =in_array()=
+- =AssertType= - =gettype()=
+- =AssertNull= - =is_null()=
