@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{isThree}\PYG{o}{\PYGZlt{}}\PYG{n+nx}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n+nx}{arr}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{T}\PYG{p}{[])}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{T}\PYG{+w}{ }\PYG{o}{|}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{arr}\PYG{p}{.}\PYG{n+nx}{length}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n+nx}{arr}\PYG{p}{[}\PYG{l+m+mf}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{null}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

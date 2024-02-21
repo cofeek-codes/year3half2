@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{myUser}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{User}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}...\PYGZcb{}}
+\end{Verbatim}

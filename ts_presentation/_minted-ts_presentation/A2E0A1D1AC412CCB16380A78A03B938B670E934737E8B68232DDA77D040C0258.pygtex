@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{name}\PYG{o}{:}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Alex\PYGZdq{}}\PYG{p}{;}
+\end{Verbatim}

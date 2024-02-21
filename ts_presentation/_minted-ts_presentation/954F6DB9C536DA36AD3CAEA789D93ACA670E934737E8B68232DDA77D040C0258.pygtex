@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kr}{type}\PYG{+w}{ }\PYG{n+nx}{Post}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{id}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{number}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{title}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{content}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{stats}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{likes}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{number}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nx}{reposts}\PYG{+w}{ }\PYG{k+kt}{number}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{myPost}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{Post}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}...\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kr}{type}\PYG{+w}{ }\PYG{n+nx}{User}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{name}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{age}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{number}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{isAdmin}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{boolean}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

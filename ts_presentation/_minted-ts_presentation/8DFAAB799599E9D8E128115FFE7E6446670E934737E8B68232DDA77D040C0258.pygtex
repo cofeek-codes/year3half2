@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{add}\PYG{p}{(}\PYG{n+nx}{a}\PYG{o}{:}\PYG{k+kt}{number}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{o}{:}\PYG{k+kt}{number}\PYG{p}{)}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{number}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{a}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{;}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{      }\PYG{n+nx}{add}\PYG{p}{(}\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}яблоко\PYGZdq{}}\PYG{p}{);}
+\end{Verbatim}

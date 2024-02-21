@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kr}{type}\PYG{+w}{ }\PYG{n+nx}{myBooleanString}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{o}{|}\PYG{+w}{ }\PYG{k+kt}{boolean}
+\end{Verbatim}

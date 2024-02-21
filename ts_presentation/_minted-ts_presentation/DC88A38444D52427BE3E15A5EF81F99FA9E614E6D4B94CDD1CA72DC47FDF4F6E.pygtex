@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{post}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{id}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{title}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Первый пост\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{content}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Какой\PYGZhy{}то пост о чем\PYGZhy{}то\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{stats}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{likes}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nx}{reposts}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{2}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

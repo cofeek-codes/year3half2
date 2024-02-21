@@ -1,0 +1,44 @@
+
+  \frametitle{Ответы на задачи}
+
+  % 1
+  \begin{block}{Решение задачи 1}
+    \begin{minted}{typescript}
+      function pow(a: number): number {
+        return Math.pow(a, 2)
+      }
+
+    \end{minted}
+
+  \end{block}
+
+  % 2
+  \begin{block}{Решение задачи 2}
+    \begin{minted}{typescript}
+      type Post {
+        id: number,
+        title: string,
+        content: string,
+        stats: {
+          likes: number,
+          reposts number
+        }
+      }
+
+      let myPost: Post = {...}
+    \end{minted}
+
+  \end{block}
+
+  % 3
+  \begin{block}{Решение задачи 3}
+    \begin{minted}{typescript}
+      function isThree<T>(arr: T[]): T | null {
+        return arr.length >= 3 ? arr[2] : null
+      }
+
+    \end{minted}
+
+  \end{block}
+
+

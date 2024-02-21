@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{      }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{gettype}\PYG{o}{\PYGZlt{}}\PYG{n+nx}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n+nx}{v}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{T}\PYG{p}{)}\PYG{o}{:}\PYG{+w}{ }\PYG{o+ow}{void}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// орератор typeof возвращает тип переменной}
+\PYG{+w}{        }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{o+ow}{typeof}\PYG{+w}{ }\PYG{n+nx}{v}\PYG{p}{)}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{      }\PYG{n+nx}{gettype}\PYG{p}{(}\PYG{l+m+mf}{1}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n+nx}{gettype}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)}
+\end{Verbatim}
