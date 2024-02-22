@@ -1,0 +1,62 @@
+#+TITLE: Фреймворки в PHP
+#+AUTHOR: Кормышев Егор ИСиП-301
+#+DATE: \today
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+* Фреймворки
+Библиотеки кода для часто используемых функций. Сокращают объем исходного кода
+
+Плюсы:
+
+- Быстрая разработка
+- Меньше кода
+- Библиотеки для общих задач
+- Следование паттернам (структура)
+- Безопаснее
+- Оптимизирован для командной работы
+- Легко обслуживать
+
+
+* Модель MVC (Model View Controller)
+
+Фреймворки используют шаблоны проектирования. Самый популярный - MVC.
+
+[[./mvc.png]]
+
+* Существующие фреймворки
+
+- Laravel
+- Symfony
+- yuiiframework
+
+
+* Laravel
+
+** MVC в Laravel
+
+- Маршрут (route)
+
+  #+begin_src php
+	 <?php
+
+	 Route::get('/about', [MainController::class, 'acAbout']);
+  #+end_src
+
+- Контроллер (controller)
+
+  #+begin_src php
+	 <?php
+
+	 return view('page')->with(['content' => $content]);
+  #+end_src
+
+
+- Представление (view)
+
+  #+begin_src php
+	 <?php
+	 <body>
+		  <h1> {{$content}}  </h1>
+				</body>
+  #+end_src

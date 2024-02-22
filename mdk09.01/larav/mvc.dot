@@ -1,0 +1,10 @@
+digraph {
+	 Model[shape=square];
+	 View[shape=square];
+	 Controller[shape=square];
+	 Model -> View[label=updates];
+	 Controller -> Model[label=manipulates];
+	 View -> User[label=sees];
+	 User -> Controller[label=uses];
+	 
+}
