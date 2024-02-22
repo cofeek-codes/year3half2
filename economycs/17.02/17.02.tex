@@ -1,0 +1,94 @@
+% Created 2024-02-17 Sat 10:16
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[russian]{babel}
+\author{Кормышев Егор}
+\date{\today}
+\title{Задачи}
+\hypersetup{
+ pdfauthor={Кормышев Егор},
+ pdftitle={Задачи},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={Russian}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Задача 1}
+\label{sec:orgfde0da1}
+
+\subsection{Дано}
+\label{sec:org713036c}
+
+ПР{\text{вал}} = 10 млн руб \\
+OC{\text{н}} = 9 млн руб \\
+\text{РП} = 14000 руб \\
+\text{ПР} = 2000 руб \\
+\text{Д} = 6д \\
+
+\subsection{Найти}
+\label{sec:orge5238af}
+
+В = ?
+
+\subsection{Решение}
+\label{sec:orgf9200e7}
+
+O(В) = O_{\text{c 0-14}} - O_{\text{c баз}} \\
+O_{\text{c баз}} = ПФ * (1 - a_{\text{фф}}) = 2000\text{тр} * (1-0,6) = 800тр \\
+O_{c \text{отч}} = \frac{C_{\text{реал}}}{C_{\text{отч}}} \\
+O_{\text{отч}} = 360 / D_{\text{отч}} \\
+С_{\text{реал}} = 14000 - 2000 = 12000 \\
+\Delta D_{\text{отч}} = D_{\text{баз}} - D_{\text{отч}} = 24 - 6 = 18 \\
+D_{\text{баз}} = С_{\text{реал}} / O_{\text{баз}} = 360 / 15 = 24 \\
+O_{\text{баз}} = С_{\text{реал}} = \frac{12000}{800} = 15 \\
+O_{\text{отч}}  = \frac{12000}{20} = 600
+
+\section{Задача 2}
+\label{sec:org85c74cf}
+\subsection{Дано}
+\label{sec:orga004e59}
+\text{РП{\text{баз}}} = 9 \text{млн руб} \\
+\text{О{\text{баз}}} = 0,4 \text{млн руб} \\
+\text{РП{\text{отч}}} = 10,35 \text{млн руб} \\
+\text{ОС{\text{баз}}} = 0,46 \text{млн руб}
+
+
+\section{Задача 6}
+\label{sec:orgb447571}
+\subsection{Дано}
+\label{sec:org658b185}
+РП = 25 млн р \\
+ОС = 1500 тыс р \\
+\Delta D = 3 дня \\
+\subsection{Найти}
+\label{sec:org9b90b85}
+В - ?
+\subsection{Решение}
+\label{sec:orgf4ccc26}
+\begin{math}
+  D = \frac{T}{K\text{об}} \\
+  К\text{об} = \frac{\text{РП}}{\text{ОС}} \\
+  К\text{об_{1}} = \frac{\text{РП_{1}}}{\text{ОС_{1}}} = \frac{25\text{млн}}{1500\text{тыс руб}} = 16,67 \\
+  D_{1} = \frac{T}{K\text{об_{1}}} = \frac{360}{16,67} = 21,6 = 22 \\
+  К\text{об_{2}} = \frac{\text{РП_{1}}}{\text{ОС_{1}}} = \frac{25\text{млн}}{1500\text{тыс руб}} = 16,67 \\
+  
+  
+\end{math}
+\end{document}
