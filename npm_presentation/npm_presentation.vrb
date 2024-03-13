@@ -1,0 +1,35 @@
+\frametitle{Создание проекта}
+  \begin{center}
+
+    \largeС этого момента начинается создание проекта в интерактивном режиме
+    NPM поможет вам составить конфигурацию проекта через ответы на вопросы
+  \end{center}
+  \bigskip
+  \begin{center}
+    Список вопросов
+  \end{center}
+
+  \begin{enumerate}
+  \item \texttt{package name} - имя проекта (по умолчанию - имя папки)
+  \item \texttt{version} - версия проекта (по умолчанию - 1.0.0)
+  \item \texttt{description} - описание - краткое описание назначения и/или функционала проекта
+  \item \texttt{entry point} - главный файл проекта (по умолчанию - index.js)
+  \item \texttt{test command} - скрипт для тестированя (по умолчанию - просто вывод строки в консоль)
+  \item \texttt{git repository} -- ссылка на git репозиторий (при наличии)
+  \item \texttt{keywords} - ключевые слова - "теги" по котором будут искать ваш пакет (например: framework, game, preprocessor)
+  \item \texttt{author} - автор - ваш ник на npm или github c почтой в особом формате (\texttt{coffeek-codes <kormyshev11@mail.ru>})
+  \item \texttt{license} - Лицензия - самая популярная свободная лицензия MIT - подробнее \underline{\href{https://wiki.merionet.ru/articles/sravnenie-open-source-licenzij/}{здесь}}
+  \end{enumerate}
+
+  \begin{center}
+    Затем вы увидите вашу конфигурацию и последний вопрос с подтверждением.
+  \end{center}
+
+  \bigskip
+  \bigskip
+  \bigskip
+
+  \begin{center}
+    \large Поздравляю! Вы создали свой первый npm проект!
+  \end{center}
+
