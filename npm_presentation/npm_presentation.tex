@@ -37,7 +37,7 @@
 
 % NPM
 
-\textcolor{blue}{\textbf{Node Package Manager}} - менеджер пакетов Node.js предоставляющий такие функции для управления пакетами, как \textcolor{blue}{установка}, \textcolor{blue}{удаление}, \textcolor{blue}{редактирование} и другие
+\textcolor{blue}{\textbf{Node Package Manager}} - менеджер пакетов Node.js предоставляющий такие функции для управления пакетами, как \textcolor{blue}{установка}, \textcolor{blue}{удаление}, \textcolor{blue}{обновление} и другие
 
 \bigskip
 \begin{center}
@@ -106,8 +106,153 @@
 
 % Frame 4: Exploring created project
 
-\begin{frame}
-  \frametitle{Разбираемся с проектом первая зависимость}
-\end{frame}
+\begin{frame}[fragile, allowframebreaks]
+  \frametitle{Структура проекта и \texttt{package.json}}
+  Теперь после того, как вы создали свой проект или же какой-либо шаблон (например \texttt{vite}) в папке проекта вы увидите файл с названием \texttt{package.json}
+  \bigskip
+  В проекте \texttt{vite} то, что вы увидите в \texttt{package.json} можно поделить примерно следующие части:
+  
+    \begin{block}{1. Информация о проекте}
+      \begin{minted}{json}
+          "name": "vite",
+          "private": true,
+          "version": "0.0.0",
+          "type": "module",
+      \end{minted}
+    \end{block}
 
+        \begin{block}{2. Скрипты запуска проекта}
+      \begin{minted}{json}
+        "scripts": {
+          "dev": "vite",
+          "build": "tsc && vite build",
+          "preview": "vite preview"
+        },
+      \end{minted}
+    \end{block}
+
+        \begin{block}{3. Зависимости}
+      \begin{minted}{json}
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  }
+      \end{minted}
+    \end{block}
+    
+    
+    А также папку \textcolor{red}{\texttt{node\_modules/}}
+
+    \framebreak
+
+    Эта папка содержит файлы \textbf{ВСЕХ ЗАВИСИМОСТЕЙ} в вашем проекте и у нее есть 1 главное правило
+    
+    \begin{center}
+      При передаче проекта с помощью контроля версий (git) или любыми другими способами
+    \end{center}
+    
+      \begin{center}
+        
+      \textcolor{red}{\textbf{НИКОГДА НЕ ВКЛЮЧАЙТЕ ЭТУ ПАПКУ В ПРОЕКТ }}
+    \end{center}
+
+    \begin{center}
+      Это может привести к потере и повреждению файлов зависимостей
+    \end{center}
+    
+  \end{frame}
+
+  % Frame 5: NPM Commands
+
+  \begin{frame}
+    \frametitle{Команды NPM}
+
+    \begin{center}
+      \large Основные команды NPM:
+      
+    \end{center}
+    \begin{itemize}
+    \item \texttt{npm install <название пакета>} (кратко \texttt{npm i}) - установить пакет в проект
+    \item \texttt{npm uninstall <название пакета>} (кратко \texttt{npm un}) - удалить пакет из проекта
+    \item \texttt{npm run <название скрипта>} - запустить скрипт из раздела \texttt{scripts} файла \texttt{package.json}
+      
+      \bigskip
+      
+    \item \texttt{npm install (i)} - установить все зависимости из файла \texttt{package.json}
+      \begin{center}
+        \textcolor{red}{\huge{↑}}
+      \end{center}
+      \begin{center}
+      \textbf{ИМЕННО ТАК УСТАНАВЛИВАЮТСЯ ЗАВИСИМОСТИ ПРИ ПЕРЕДАЧЕ ПРОЕКТА}
+      \end{center}
+    \end{itemize}
+  \end{frame}
+  
+  % Frame 6: First Dependency
+
+  \begin{frame}[fragile,allowframebreaks]{Первая зависимость}
+    Итак, установим первую зависимость
+
+    \bigskip
+
+% Check shell place
+    
+    Для решения задач вам понадобится установить пакет \texttt{lodash-ts} \\ Сделать это мможно следующей командой:
+
+    \bigskip
+ 
+    \begin{center}
+  \texttt{npm install lodash-ts}
+
+
+    \bigskip
+
+    Или более краткая форма:
+
+    
+    \bigskip
+ 
+    \texttt{npm i lodash-ts}
+    
+    \end{center}
+
+    \framebreak
+
+    \begin{center}
+      После этого в файле \texttt{package.json} появятся следующие строки:
+      \begin{block}{После установки}
+        
+        \begin{minted}{json}
+          "dependencies": {
+            "lodash-ts": "^1.2.7"
+          }  
+        \end{minted}
+        
+      \end{block}
+    \end{center}
+  \end{frame}
+
+% Frame 7: Dependency Usage 
+
+  \begin{frame}[fragile]
+    \frametitle{Импорт и использование зависимостей в проекте}
+    После установки вы можете использовать функции зависимостей в своем проекте
+    \\
+    Для этого используется следующий синтаксис:
+
+    \begin{block}{Пример Импорта}
+      \begin{minted}{typescript}
+        import <название функции> from <название пакета>
+      \end{minted}
+    \end{block}
+    \begin{center}
+      Пример для \texttt{lodash-ts}
+    \end{center}
+    \begin{block}{lodash пример}
+      \begin{minted}{typescript}
+        import isArray from 'lodash-ts/isArray';
+      \end{minted}
+    \end{block}
+  \end{frame}
+  
 \end{document}
