@@ -1,0 +1,29 @@
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5112,2697)(7054,-4798)
+\thinlines
+{\color[rgb]{0,0,0}\put(8731,-2446){\line( 6,-1){2948.108}}
+}%
+{\color[rgb]{0,0,0}\put(8686,-2446){\line( 3,-1){2713.500}}
+}%
+{\color[rgb]{0,0,0}\put(8596,-2401){\line( 4,-3){1958.400}}
+}%
+{\color[rgb]{0,0,0}\put(7066,-4066){\line( 1, 1){1665}}
+\put(8686,-2356){\line( 1,-6){403.784}}
+\put(9046,-4786){\line(-5, 2){1931.897}}
+}%
+{\color[rgb]{0,0,0}\put(8641,-2446){\line( 5,-6){1656.148}}
+}%
+\put(11881,-3436){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}�Заработная плата}%
+}}}}
+\put(12151,-2626){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Материальные ресурсы}%
+}}}}
+\put(10981,-3931){\makebox(0,0)[lb]{\smash{{\SetFigFont{29}{34.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Отчисления}%
+}}}}
+\end{picture}%
