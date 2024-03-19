@@ -1,1 +1,44 @@
-% hello world
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{robots.txt}
+\author{cofeek-codes}
+\date{\today}
+
+
+\usepackage[russian]{babel}
+\usepackage{minted}
+
+\begin{document}
+
+\maketitle
+
+\section{Определение}
+
+\texttt{robots.txt} - текствовый файл, который размещяется в корне сайта и содержит \textbf{инструкции для поисковых систем} по индексированию сайта
+
+\section{Требования к файлу}
+
+\begin{itemize}
+    \item Размер < 500 КБ
+    \item Название - roborts.txt
+    \item В корне сайта
+    \item Размещен на сервере с кодом 200
+\end{itemize}
+
+\section{Директивы (Yandex)}
+
+\begin{itemize}
+    \item \texttt{User-agent} - указать самого "робота"
+    \item \texttt{Disallow} - запретить индексирование файла
+    \item \texttt{Allow} - разрешить индексирование файла
+    \item \texttt{Allow} - разрешить индексирование файла
+    \item \texttt{sitemap} - указать файл \texttt{sitemap}
+    \item \texttt{HOST} - указать зеркало сайта
+    \item \texttt{Clean-param} - убрать параметры из ссылки
+    
+    
+\end{itemize}
+
+
+\end{document}
