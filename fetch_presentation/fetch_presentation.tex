@@ -6,12 +6,13 @@
 \usepackage[russian]{babel}
 \usepackage{minted}
 \usepackage{hyperref}
-
+\usepackage{graphicx}
 
 \title{Работа с запросами в JavaScript} 
 \subtitle{и база HTTP}
 \author{Кормышев Егор ИСиП-301}
 \date{\today}
+
 
 \begin{document}
 
@@ -20,9 +21,118 @@
 % Frame 2: http requiests definitions 
 
 \begin{frame}
-  \frametitle{определение API и HTTP запроса}
+  \frametitle{Определение HTTP запроса}
 
-  \large \textcolor{blue}{HTTP-запрос} - \normalsize Обмен данными между клиентом и сервером
+  \large\textcolor{blue}{HTTP-запрос} - \normalsize Обмен данными между клиентом и сервером
+  
+  \bigskip
+
+  \begin{center}
+    \large Виды HTTP-сообщений
+  \end{center}
+
+  \begin{columns}
+    % Request
+    
+    \begin{column}{0.5\textwidth}
+      \centering
+      \large \textbf{Запрос (Request)}
+      % Client -> Server image
+ \includegraphics[width=1.2\textwidth]{assets/request.png}
+    \end{column}
+    
+    % Response
+    
+    \begin{column}{0.5\textwidth}
+      \centering
+      \large \textbf{Ответ (Response)}
+      \includegraphics[width=1.2\textwidth]{assets/response.png}
+    \end{column}
+
+  \end{columns}
+
+
+\end{frame}
+
+% Frame 3: HTTP Request parts
+
+\begin{frame}
+  \frametitle{Структура HTTP запроса}
+\begin{center}
+  HTTP-запрос состоит из нескольких частей:
+  \begin{itemize}
+  \item Строка запроса - \texttt{https://someexample.com}
+  \item Заголовки (headers) - \texttt{\{ \\
+        Accept: application/json \\
+        User-Agent: Mozilla/5.0 \\
+        Host: example.com \\
+        ... \\
+      \}}
+    
+  \item Тело запроса (body) - данные, передаваемые серверу при запросе в формате json/xml/text
+    
+  \end{itemize}
+\end{center}
+\end{frame}
+
+% Frame 4: HTTP response
+
+\begin{frame}
+  \frametitle{Структура HTTP ответа}
+
+  \begin{center}
+  HTTP-ответ состоит из нескольких частей:
+  \begin{itemize}
+  \item Строка ответа - \texttt{HTTP/1.1 200 OK}
+  \item Заголовки (headers) - \texttt{\{ \\
+        Accept: application/json \\
+        User-Agent: Mozilla/5.0 \\
+        Host: example.com \\
+        ... \\
+      \}}
+    
+  \item Тело запроса (body) - данные, передаваемые от сервера в формате json/html/text
+    
+  \end{itemize}
+\end{center}
+  
+\end{frame}
+
+% Frame 5: HTTP Response codes
+
+\begin{frame}
+  \frametitle{Коды статуса HTTP-ответа}
+  \begin{center}
+    Все коды делятся на 5 групп:
+  \end{center}
+  
+    \begin{itemize}
+    \item 1.x.x - Информация
+    \item 2.x.x - Успех
+    \item 3.x.x - Перенаправление
+    \item 4.x.x - Клиентская ошибка
+    \item 5.x.x - Серверная ошибка
+    \end{itemize}
+    
+    \begin{center}
+    Подробнее в \textcolor{blue}{\underline{\href{assets/codes.png}{таблице}}}
+  \end{center}
+  
+  \end{frame}
+
+% Frame 6: GET request in js/ts
+
+\begin{frame}
+  \frametitle{Программируемые запросы в js/ts}
+  \begin{center}
+    Способы выполнения HTTP запроса в javascipt:
+  \end{center}
+  \begin{itemize}
+  \item Стандартная фунцкия \texttt{fetch()}
+  \item Библиотека \texttt{axios}
+  \end{itemize}
+
+  
 \end{frame}
 
 \end{document}
