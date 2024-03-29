@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$orange: #f48023;
+$gray: #eaeaea;
+$blue: #1682fd;
+
+// header
+
+.header {
+	height: 84px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	& > * {
+		display: flex;
+		align-items: center;
+	}
+	h1 {
+		margin-left: 15px;
+		span {
+			font-weight: bold;
+			&:first-child {
+				color: $orange;
+			}
+		}
+	}
+
+	&__title {
+		font-family: "Roboto";
+		color: #808080;
+		font-weight: 900;
+		font-size: 16px;
+		* {
+			color: black;
+		}
+	}
+
+	&__auth {
+		.btn__login {
+			padding: 12px 20px;
+			border-radius: 5px;
+			background-color: $gray;
+			color: $blue;
+			font-weight: bold;
+		}
+		.btn__register {
+			margin-right: 19px;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			border-radius: 5px;
+			background-color: $orange;
+			padding: 12px 20px;
+			span {
+				margin-left: 12px;
+				font-weight: bold;
+				color: #fff;
+			}
+		}
+	}
+}
+
+// header
