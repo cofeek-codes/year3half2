@@ -1,5 +1,4 @@
-import { User } from './User'
-export type Question = {
+export type TQuestion = {
 	id: number,
 	title: string,
 	description: string,
