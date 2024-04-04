@@ -19,7 +19,7 @@ const Question = ({ question }: { question: TQuestion }) => {
          </div>
          <div className="w-[665px] h-[22px] relative bg-white">
             <div className="left-0 top-0 absolute justify-start items-center gap-2.5 inline-flex">
-               {question.tags.map((i, t) => (
+               {question.tags.map((t, i) => (
                   <React.Fragment key={i}>
                      <div className="px-2.5 py-[5px] bg-gray-200 rounded-[5px] justify-start items-center flex">
                         <div className="text-zinc-500 text-[10px] font-normal font-['Roboto'] tracking-wide">{t}</div>
