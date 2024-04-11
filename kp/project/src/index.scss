@@ -68,15 +68,18 @@ $blue: #3b82f6;
 
 //main
 
-.main__wrapper {
+.main__wrapper, .auth__wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
-
-.inner__wrapper {
+.auth__wrapper {
+	flex-direction: row;
    
+}
+.auth__wrapper .inner__wrapper {
+   display:flex;
 }
 
 //main

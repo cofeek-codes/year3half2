@@ -5,6 +5,8 @@ import IndexPage from "./pages/IndexPage";
 import NewQuestionPage from "./pages/NewQuestionPage";
 import Root from "./pages/Root";
 import "./index.scss";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter([
    {
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
    {
       path: "/newquestion",
       element: <NewQuestionPage />,
+   },
+   {
+      path: "/auth/register",
+      element: <RegisterPage />,
+   },
+   {
+      path: "/auth/login",
+      element: <LoginPage />,
    },
 ]);
 
