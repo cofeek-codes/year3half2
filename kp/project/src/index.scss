@@ -37,7 +37,9 @@ $blue: #3b82f6;
 			color: black;
 		}
 	}
-
+   &__burger {
+      display: none;
+   }
 	&__auth {
 		.btn__login {
 			padding: 12px 20px;
@@ -61,6 +63,15 @@ $blue: #3b82f6;
 			}
 		}
 	}
+}
+
+@media(max-width: 768px) {
+   .header__auth {
+      display: none;
+   }
+   .header__burger {
+      display: block;
+   }
 }
 
 // header
