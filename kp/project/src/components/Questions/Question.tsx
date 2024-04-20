@@ -5,21 +5,21 @@ import { images } from "../../utils/imageLoader"
 const Question = ({ question }: { question: TQuestion }) => {
    const user = mockUsers.find(u => u.questionsIds.includes(question.id))!
    return <div className="question__wrapper">
-      <div className="w-[725px] h-[193px] px-[30px] py-[25px] bg-white rounded-[5px] shadow border border-gray-200 flex-col justify-start items-start gap-[15px] inline-flex mb-[23px]">
+      <div className="px-[30px] py-[25px] bg-white rounded-[5px] shadow border border-gray-200 flex-col justify-start items-start gap-[15px] inline-flex mb-[23px]">
          <div className="w-[665px] h-10 relative">
             <div className="w-[71px] h-8 left-[55px] top-[4px] absolute">
                <div className="left-0 top-[20px] absolute text-zinc-500 text-[10px] font-normal font-['Roboto'] tracking-wide">{user.lastOnline}</div>
-               <div className="left-0 top-0 absolute text-black text-[13px] font-normal font-['Roboto'] tracking-wide">{user.name}</div>
+               <div className="question__title left-0 top-0 absolute text-black text-[13px] font-normal font-['Roboto']">{user.name}</div>
             </div>
             <img className="w-10 h-10 left-0 top-0 absolute rounded-full" src={user.avatar} />
             <div className="w-6 h-6 left-[641px] top-[8px] absolute" />
          </div>
-         <div className="self-stretch h-[51px] flex-col justify-start items-start gap-2.5 flex">
+         <div className="flex-col justify-start items-start gap-2.5 flex">
             <div className="text-black text-sm font-bold font-['Roboto'] tracking-wide">{question.title}</div>
-            <div className="w-[665px] text-black text-sm font-light font-['Roboto'] leading-[25px] tracking-wide">{question.description}</div>
+            <div className="question__description text-black text-sm font-light font-['Roboto'] leading-[25px] tracking-wide">{question.description}</div>
          </div>
-         <div className="w-[665px] h-[22px] relative bg-white">
-            <div className="left-0 top-0 absolute justify-start items-center gap-2.5 inline-flex">
+         <div className="h-[22px] relative bg-white">
+            <div className=" justify-start items-center gap-2.5 inline-flex">
                {question.tags.map((t, i) => (
                   <React.Fragment key={i}>
                      <div className="px-2.5 py-[5px] bg-gray-200 rounded-[5px] justify-start items-center flex">

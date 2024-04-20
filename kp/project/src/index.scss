@@ -93,6 +93,21 @@ $blue: #3b82f6;
    display:flex;
 }
 
+@media(max-width: 768px) {
+   .question__wrapper {
+      width: 80%;
+      &>div {
+         width: 100%;
+      }
+   }
+      .question__title {
+         width: 100%;
+      }
+      .question__description {
+         width: 100%;
+      }
+   
+}
 //main
 
 
