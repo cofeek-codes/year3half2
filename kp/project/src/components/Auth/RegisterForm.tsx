@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import AuthFromTitle from "./AuthFromTitle"
 
 const RegisterForm = () => {
@@ -8,9 +9,11 @@ const RegisterForm = () => {
          <input className="border h-[42px] pl-[15px] w-[380px] rounded-[5px] border-solid border-[#eaeaea];" defaultValue={'azakost@gmail.com'} placeholder="Email" type="email" />
          <input className="border h-[42px] pl-[15px] w-[380px] rounded-[5px] border-solid border-[#eaeaea];" defaultValue={'password'} placeholder="Password" type="password" />
          <input className="border h-[42px] pl-[15px] w-[380px] rounded-[5px] border-solid border-[#eaeaea];" defaultValue={'password'} placeholder="Repeat Password" type="password" />
-         <div className="w-[380px] h-[38px] relative bg-orange-500 rounded-[5px] flex items-center justify-center">
-            <div className="text-white text-[15px] font-black font-['Roboto'] tracking-tight">Зарегистрироваться</div>
-         </div>
+         <Link to={'/'}>
+            <div className="w-[380px] h-[38px] relative bg-orange-500 rounded-[5px] flex items-center justify-center">
+               <div className="text-white text-[15px] font-black font-['Roboto'] tracking-tight">Зарегистрироваться</div>
+            </div>
+         </Link>
       </form >
    </div>
 

@@ -29,7 +29,7 @@ const Question = ({ question }: { question: TQuestion }) => {
                ))}
 
             </div>
-            <div className="left-[520px] top-[3px] absolute bg-white justify-start items-center gap-[15px] inline-flex">
+            <div className="question__stats left-[520px] top-[3px] absolute bg-white justify-start items-center gap-[15px] inline-flex">
                <div className="w-[41px] h-[15px] relative flex items-center">
                   <img alt="" src={images.viewsIcon} />
                   <div className="text-zinc-500 text-[13px] font-normal font-['Roboto'] tracking-tight ml-[5px]">{question.views}</div>

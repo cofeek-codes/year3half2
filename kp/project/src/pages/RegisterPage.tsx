@@ -7,7 +7,7 @@ const RegisterPage = () => {
    return <AuthLayout>
       <RegisterForm />
       <div>
-         <img className="w-[860px] h-[816px] relative" src={images.AuthImg} />
+         <img className="w-[860px] h-[816px] relative auth__image" src={images.AuthImg} />
       </div>
    </AuthLayout>
 }

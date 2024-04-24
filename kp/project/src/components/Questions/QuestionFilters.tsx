@@ -21,7 +21,7 @@ const QuestionFilters = () => {
 
    }
    return <>
-      <div className="flex justify-start items-center w-full mb-[30px]">
+      <div className="flex justify-center items-center w-full mb-[30px]">
          <div className="px-2.5 py-[5px] bg-gray-200 selectable selected mr-[11px] selectable rounded-[100px] justify-start items-center gap-[5px] flex" onClick={selectFilter}>
             <div className="w-3 h-3 relative flex items-center " >
                <div className="w-2.5 h-2.5">
