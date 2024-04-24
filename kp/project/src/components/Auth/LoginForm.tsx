@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import AuthFromTitle from "./AuthFromTitle"
 
 const LoginForm = () => {
-   return <div className="w-[580px] h-[785px] px-[100px] py-[193px] flex-col justify-start items-start gap-5 inline-flex">
+   return <div className="w-[580px] h-[785px] px-[100px] py-[96px] flex-col justify-start items-start gap-5 inline-flex">
       <AuthFromTitle />
       <form className="flex-col justify-start items-start gap-[15px] flex">
          <input className="border h-[42px] pl-[15px] w-[380px] rounded-[5px] border-solid border-[#eaeaea];" defaultValue={'azakost@gmail.com'} placeholder="Email" type="email" />
