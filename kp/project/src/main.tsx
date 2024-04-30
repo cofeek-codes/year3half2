@@ -8,6 +8,7 @@ import "./index.scss";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import { ChakraProvider } from "@chakra-ui/react";
+import QuestionPage from "./pages/QuestionPage";
 
 const router = createBrowserRouter([
    {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
       path: "/auth/login",
       element: <LoginPage />,
    },
+   {
+      path: "/question/:id",
+      element: <QuestionPage />,
+   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
