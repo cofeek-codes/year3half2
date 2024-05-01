@@ -154,3 +154,31 @@ $blue: #3b82f6;
    filter: brightness(0) saturate(100%) invert(52%) sepia(0%) saturate(3207%) hue-rotate(133deg) brightness(101%) contrast(88%);
 }
 // question filters
+
+
+// question page
+.user__info {
+   display: flex;
+   margin-bottom: 21px;
+   
+}
+.user__name {
+   margin-left: 15px;
+   .name {
+      font-weight: bold;
+      margin-bottom: 5px;
+   }
+}
+
+.question__info {
+   .question__title {
+      font-size: 18px;
+      margin-bottom: 21px;
+      font-weight: bold;
+
+   }
+}
+.question__answers {
+   margin-top: 21px;
+}
+// question page

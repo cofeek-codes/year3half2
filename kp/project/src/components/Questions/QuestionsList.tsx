@@ -1,4 +1,4 @@
-import { mockQuestions } from '../../mock/MockQuestions'
+import { mockQuestions } from '../../mock/mockQuestions'
 import Question from './Question'
 
 const QuestionsList = () => {
