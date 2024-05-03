@@ -90,7 +90,7 @@ $blue: #3b82f6;
    
 }
 .auth__wrapper .inner__wrapper {
-   display:flex;
+   display: flex;
 }
 
 @media(max-width: 768px) {
@@ -120,8 +120,7 @@ $blue: #3b82f6;
       }
       .question__description {
          width: 100%;
-      }
-      
+      }      
       .question__stats {
          display: none;
       }
@@ -168,6 +167,9 @@ $blue: #3b82f6;
       font-weight: bold;
       margin-bottom: 5px;
    }
+   .time {
+      color: #808080;
+   }
 }
 
 .question__info {
@@ -181,4 +183,60 @@ $blue: #3b82f6;
 .question__answers {
    margin-top: 21px;
 }
+.question__answer {
+   margin-bottom: 21px;
+   box-shadow: 15px 11px 5px -6px rgba(0,0,0,0.61);
+   border-left: 3px solid orange;
+   padding-bottom: 21px;
+   padding-left: 41px;
+   &:last-child {
+      margin-bottom: 0px;
+   }
+}
+
+@media(max-width: 600px) {
+   .question__answer {
+      // margin: 0px 15px;
+      margin-bottom: 21px;
+   }
+   .quesiton__wrapper {
+      padding: 0px 15px;
+   }
+}
 // question page
+
+// question answers
+
+.answer__user {
+   display: flex;
+   
+}
+.au__info {
+   margin-left: 15px;
+   margin-bottom: 21px;
+}
+.au__name {
+   font-weight: bold; 
+}   
+
+.au__online {
+   color: #808080;
+}
+
+.answer__content {
+   margin-bottom: 11px;
+}
+.answer__rates {
+   display: flex;
+   &>.likes {
+      margin-right: 21px;
+   }
+}
+
+.likes, .dislikes {
+   display: flex;
+   align-items: center;
+   &__image {
+      margin-right: 5px;
+   }
+}

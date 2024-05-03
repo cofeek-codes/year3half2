@@ -10,6 +10,8 @@ import closedIcon from '/src/assets/check-circle.svg'
 import onTopIcon from '/src/assets/arrow-up-right.svg'
 import newIcon from '/src/assets/clock.svg'
 import AuthImg from '/src/assets/authImg.png'
+import Likes from '/src/assets/thumbs-up.svg'
+import Dislikes from '/src/assets/thumbs-down.svg'
 
 export const images = {
    Avatar1,
@@ -23,5 +25,6 @@ export const images = {
    closedIcon,
    onTopIcon,
    AuthImg,
-
+   Likes,
+   Dislikes,
 }

@@ -5,7 +5,8 @@ export type TQuestion = {
    title: string,
    description: string,
    tags: string[]
-   authorId: number
+   authorId: number,
+   date: string // hardcoded string of string from date
    views: number
    comments: number
    upvotes: number,
