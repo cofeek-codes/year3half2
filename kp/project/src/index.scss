@@ -42,7 +42,7 @@ $blue: #3b82f6;
    }
 	&__auth {
 		.btn__login {
-			padding: 12px 20px;
+			padding: 12px 21px;
 			border-radius: 5px;
 			background-color: $gray;
 			color: $blue;
@@ -55,7 +55,7 @@ $blue: #3b82f6;
 			display: flex;
 			border-radius: 5px;
 			background-color: $orange;
-			padding: 12px 20px;
+			padding: 12px 21px;
 			span {
 				margin-left: 12px;
 				font-weight: bold;
@@ -239,4 +239,69 @@ $blue: #3b82f6;
    &__image {
       margin-right: 5px;
    }
+}
+
+// question answer form
+
+
+.question__answer__form {
+   margin: 21px 0px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+   width: 100%;
+   form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      input {
+         display: block;
+         width: 100%;
+         padding: 15px 0px;
+         background: #eaeaea;
+         &:placeholder-shown {
+            padding-left: 15px;
+            border-radius: 5px;
+         }
+      }
+   }
+}
+
+.answer__form__buttons {
+   margin-top: 11px;
+   width: 100%;
+   display: flex;
+   justify-content: flex-end; 
+   align-items: center;
+   
+   button {
+      &:first-child {
+         margin-right: 11px;
+         background: #f48023;
+         color: #fff;
+         border-radius: 5px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 12px 21px;
+      }
+      &:last-child {
+         padding: 12px 21px;
+			border-radius: 5px;
+			background-color: $gray;
+			color: $blue;
+			font-weight: bold;
+      }
+   }
+}
+
+.question__answer__heading {
+   color: #808080;
+   font-weight: bold;
+   font-size: 16px;
+   margin-bottom: 21px;
 }

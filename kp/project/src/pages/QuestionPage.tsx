@@ -35,6 +35,16 @@ const QuestionPage = () => {
                </Markdown>
             </div>
          </div>
+         <div className="question__answer__form">
+            <div className="question__answer__heading">Предложить Решение</div>
+            <form>
+               <input name="" type="text" placeholder="Type here your wise suggestion" />
+               <div class="answer__form__buttons">
+                  <button type="submit">Отправить</button>
+                  <button type="clear">Очистить</button>
+               </div>
+            </form>
+         </div>
          <div className="question__answers">
             {question?.answers.map((a, i) => (
                <div key={i} className="question__answer">
