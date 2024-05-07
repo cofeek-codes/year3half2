@@ -5,11 +5,42 @@ import { mockQuestions } from "../mock/mockQuestions"
 import { Avatar } from "@chakra-ui/react"
 import { mockUsers } from "../mock/MockUsers"
 import { images } from "../utils/imageLoader"
+import { useEffect, useState } from "react"
+import { TAnswer } from "../types/TComment"
+import { useAnswersStore } from "../store/answersStore"
 
 const QuestionPage = () => {
-   const { id } = useParams()
-   const question = mockQuestions.find(q => q.id == id)
-   const author = mockUsers.find(u => u.id == question?.authorId)
+   const { id } = useParams();
+   const question = mockQuestions.find(q => q.id == id);
+   const author = mockUsers.find(u => u.id == question?.authorId);
+   const [answerContent, setAnswerContent] = useState('');
+   const setQuestionId = useAnswersStore.getState().setQuestionId;
+   const setAnswers = useAnswersStore.getState().setAnswers;
+   const answers = useAnswersStore((state) => state.answers);
+   const [localAnswers, setLocalAnswers] = useState<TAnswer[]>(answers);
+
+   useEffect(() => {
+      setQuestionId(id)
+   }, [])
+
+   useEffect(() => {
+      setLocalAnswers(answers);
+   }, [answers]);
+
+   const addAnswer = (e) => {
+      e.preventDefault();
+      let newAnswer: TAnswer = {
+         author: mockUsers[0],
+         content: answerContent,
+         likes: 0,
+         dislikes: 0,
+         questionId: id,
+         time: new Date().toLocaleString(),
+      };
+      setQuestionId(id);
+      setAnswers([newAnswer, ...localAnswers]);
+   };
+
    return <RootLayout>
       <div className="quesiton__wrapper">
          <div className="user__info">
@@ -37,16 +68,16 @@ const QuestionPage = () => {
          </div>
          <div className="question__answer__form">
             <div className="question__answer__heading">Предложить Решение</div>
-            <form>
-               <input name="" type="text" placeholder="Type here your wise suggestion" />
-               <div class="answer__form__buttons">
+            <form onSubmit={e => addAnswer(e)}>
+               <input onChange={e => setAnswerContent(e.target.value)} name="" type="text" placeholder="Type here your wise suggestion" />
+               <div className="answer__form__buttons">
                   <button type="submit">Отправить</button>
                   <button type="clear">Очистить</button>
                </div>
             </form>
          </div>
          <div className="question__answers">
-            {question?.answers.map((a, i) => (
+            {localAnswers.map((a, i) => (
                <div key={i} className="question__answer">
                   <div className="answer__user">
                      <div className="au__avatar">
