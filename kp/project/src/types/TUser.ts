@@ -3,5 +3,7 @@ export type TUser = {
    avatar: string,
    name: string
    lastOnline: string
-   questionsIds: number[]
+   questionsIds: number[],
+   email: string,
+   password: string
 }
