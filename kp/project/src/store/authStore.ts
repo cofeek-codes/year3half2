@@ -23,7 +23,7 @@ export const useAuthStore = create<State>((set) => ({
       console.log('[STORE]: user logged in:', user);
    },
    register: (user: TUser) => {
-      set(state => ({ authedUser: user, registeredUsers: [...registeredUsers, user] }))
+      set(state => ({ authedUser: user, registeredUsers: [...state.registeredUsers, user] }))
       console.log('[STORE]: registered user added:', user);
    },
 
