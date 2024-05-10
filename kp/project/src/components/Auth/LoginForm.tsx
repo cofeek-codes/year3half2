@@ -1,4 +1,4 @@
-import { Link, redirect } from "react-router-dom"
+import { Link, redirect, useNavigate } from "react-router-dom"
 import AuthFromTitle from "./AuthFromTitle"
 import { useState } from "react"
 import { useAuthStore } from "../../store/authStore"
@@ -15,6 +15,7 @@ const LoginForm = () => {
    const [loginError, setLoginError] = useState<boolean>(false)
    const loginToStorage = useAuthStore.getState().login
    const registeredUsers = useAuthStore.getState().registeredUsers
+   const navigate = useNavigate();
    const login = (e) => {
       e.preventDefault()
       console.log('current login creds')
@@ -25,10 +26,12 @@ const LoginForm = () => {
       console.log(debugUser.email + " " + debugUser.password)
       console.log('-----------------------------------------')
       let candidate = registeredUsers.find(u => (u.email == creds.email) && (u.password == creds.password)) // login candidate
-      if (!candidate) setLoginError(true)
-      loginToStorage(candidate)
-      redirect('/')
-      console.log('this should redirect')
+      if (!candidate) {
+         setLoginError(true)
+      } else {
+         loginToStorage(candidate)
+         navigate('/')
+      }
    }
    return <div className="w-[580px] h-[785px] px-[100px] py-[96px] flex-col justify-start items-start gap-5 inline-flex">
       <AuthFromTitle />
