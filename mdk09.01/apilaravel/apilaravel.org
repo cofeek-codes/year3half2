@@ -1,0 +1,10 @@
+#+TITLE: Api в Laravel
+#+AUTHOR: cofeek-codes
+#+DATE: 13.05.24
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+[[./api.png]]
+
+
+*Api* - прикладной программный интерфейс, позволяет передавать только данные в форматах =json/xml/text= между различными компонентами системы
