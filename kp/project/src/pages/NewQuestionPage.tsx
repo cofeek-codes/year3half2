@@ -1,6 +1,15 @@
+import { useState } from "react"
 import RootLayout from "../layouts/RootLayout"
+import { TQuestion } from '../types/TQuestion.ts'
+
+
+type TQuestionCreds = {
+   
+}
+
 
 const NewQuestionPage = () => {
+   const [question, setQuestion] = useState<TQuestionForm>()
    return <>
       <RootLayout>
          <div className="w-[720px] h-[562px] flex-col justify-start items-center gap-5 inline-flex">
@@ -46,3 +55,4 @@ const NewQuestionPage = () => {
 }
 
 export default NewQuestionPage
+

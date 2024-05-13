@@ -8,6 +8,7 @@ import { images } from "../utils/imageLoader"
 import { useEffect, useState } from "react"
 import { TAnswer } from "../types/TComment"
 import { useAnswersStore } from "../store/answersStore"
+import { useAuthStore } from "../store/authStore.ts"
 
 const QuestionPage = () => {
    const { id } = useParams();
@@ -17,6 +18,7 @@ const QuestionPage = () => {
    const setQuestionId = useAnswersStore.getState().setQuestionId;
    const setAnswers = useAnswersStore.getState().setAnswers;
    const answers = useAnswersStore((state) => state.answers);
+   const authedUser = useAuthStore((state) => state.authedUser)
    const [localAnswers, setLocalAnswers] = useState<TAnswer[]>(answers);
 
    useEffect(() => {
@@ -30,7 +32,7 @@ const QuestionPage = () => {
    const addAnswer = (e) => {
       e.preventDefault();
       let newAnswer: TAnswer = {
-         author: mockUsers[0],
+         author: authedUser,
          content: answerContent,
          likes: 0,
          dislikes: 0,
