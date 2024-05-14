@@ -1,60 +1,78 @@
-import { useState } from "react"
-import RootLayout from "../layouts/RootLayout"
-import { TQuestion } from '../types/TQuestion.ts'
-
-
+import { useState } from "react";
+import RootLayout from "../layouts/RootLayout";
+import { TQuestion } from '../types/TQuestion.ts';
+import { v4 as uuid } from 'uuid'
+import { useAuthStore } from "../store/authStore.ts";
+import { useQuestionsStore } from "../store/questionsStore.ts";
+import { useNavigate } from "react-router-dom";
 type TQuestionCreds = {
    category: string,
    title: string,
    content: string
 }
 
-
 const NewQuestionPage = () => {
-   const [question, setQuestion] = useState<TQuestionCreds>()
-   return <>
+   const currentUser = useAuthStore(state => state.authedUser)
+   const questions = useQuestionsStore(state => state.questions)
+   const setQuestions = useQuestionsStore.getState().setQuestions
+   const updateUser = useAuthStore(state => state.login)
+   const [questionCreds, setQuestionCreds] = useState<TQuestionCreds>({})
+   const navigate = useNavigate()
+
+   const addQuestion = (e) => {
+      e.preventDefault()
+      console.log("initial new question creds");
+      console.log(questionCreds);
+
+      let newQuestion: TQuestion = {
+         id: uuid(),
+         title: questionCreds.title,
+         description: questionCreds.content,
+         tags: questionCreds.category.split(', '),
+         authorId: currentUser.id,
+         date: new Date().toLocaleString(),
+         views: 0,
+         comments: 0,
+         upvotes: 0,
+         answers: []
+      }
+      setQuestions([...questions, newQuestion])
+      navigate('/')
+   }
+
+   return (
       <RootLayout>
          <div className="w-[720px] h-[562px] flex-col justify-start items-center gap-5 inline-flex">
             <div className="h-[562px] px-10 py-[30px] bg-white shadow flex-col justify-start items-start gap-5 flex">
-               <div className="w-[640px] h-[34px] relative rounded-[5px] border-2 border-gray-200">
-                  <input onChange={e => setQuestion({ category: e.target.value, title: question.title, content: question?.content })} className="p-2.5 left-0 top-0 absolute justify-start items-center gap-2.5 inline-flex">
-                     <div className="text-zinc-500 text-xs font-light font-['Roboto'] tracking-tight">Категория</div>
-               </input>
-               <div className="px-2.5 left-[596px] top-[5px] absolute justify-start items-center gap-2.5 inline-flex">
-                  <div className="w-6 h-6 relative" />
-               </div>
+               <form className='newQuestion__form' onSubmit={addQuestion}>
+                  <input
+                     required
+                     placeholder="Категория"
+                     onChange={e => setQuestionCreds({ category: e.target.value, title: questionCreds.title, content: questionCreds?.content })}
+                     className="w-[640px] h-[34px] relative rounded-[5px] border-2 border-gray-200"
+                  />
+                  <input
+                     required
+                     placeholder="Заголовок"
+                     onChange={e => setQuestionCreds({ category: questionCreds.category, title: e.target.value, content: questionCreds?.content })}
+                     className="w-[640px] h-[34px] relative rounded-[5px] border-2 border-gray-200"
+                  />
+                  <input
+                     required
+                     placeholder="Опишите проблему или вопрос"
+                     onChange={e => setQuestionCreds({ category: questionCreds.category, title: questionCreds.title, content: e.target.value })}
+                     className="w-[640px] h-[344px] relative rounded-[5px] border-2 border-gray-200"
+                  />
+                  <div className="w-[108px] h-[30px] px-5 py-3 bg-orange-500 rounded-[5px] justify-start items-center gap-3 inline-flex">
+                     <button type="submit">
+                        <div className="text-white text-xs font-black font-['Roboto'] tracking-tight">Опубликовать</div>
+                     </button>
+                  </div>
+               </form>
             </div>
-            <div className="w-[640px] h-[34px] relative rounded-[5px] border-2 border-gray-200">
-               <input onChange={e => setQuestion({ category: question.category, title: e.target.value, content: question?.content })} className="p-2.5 left-0 top-0 absolute justify-start items-center gap-2.5 inline-flex">
-                  <div className="text-zinc-500 text-xs font-light font-['Roboto'] tracking-tight">Заголовок</div>
-            </input>
          </div>
-         <div className="w-[640px] h-[344px] relative rounded-[5px] border-2 border-gray-200">
-            <input onChange={e => setQuestion({ category: question.category, title: question.title, content: e.target.value })} className="p-2.5 left-0 top-0 absolute justify-start items-center gap-2.5 inline-flex">
-               <div className="text-zinc-500 text-xs font-light font-['Roboto'] tracking-tight">Опишите проблему или вопрос</div>
-         </input>
-      </div>
-      <div className="w-[640px] h-[30px] relative">
-         <div className="w-[241px] h-[30px] left-[399px] top-0 absolute">
-            <div className="w-[113px] h-[30px] px-5 py-3 left-0 top-0 absolute bg-gray-200 rounded-[5px] justify-start items-center gap-3 inline-flex">
-               <div className="text-zinc-500 text-xs font-normal font-['Roboto'] tracking-tight">Save as draft</div>
-            </div>
-            <div className="w-[108px] h-[30px] px-5 py-3 left-[133px] top-0 absolute opacity-50 bg-orange-500 rounded-[5px] justify-start items-center gap-3 inline-flex">
-               <div className="w-[13px] h-[13px] relative" />
-               <div className="text-white text-xs font-black font-['Roboto'] tracking-tight">Publish</div>
-            </div>
-         </div>
-         <div className="h-[30px] px-5 py-3 left-0 top-0 absolute opacity-80 bg-blue-500 rounded-[5px] justify-start items-center gap-3 inline-flex">
-            <div className="w-[13px] h-[13px] relative" />
-            <div className="text-white text-xs font-black font-['Roboto'] tracking-tight">Add Image</div>
-         </div>
-      </div>
-   </div >
-   </div >
-   </RootLayout >
-   </>
-
+      </RootLayout>
+   );
 }
 
-export default NewQuestionPage
-
+export default NewQuestionPage;

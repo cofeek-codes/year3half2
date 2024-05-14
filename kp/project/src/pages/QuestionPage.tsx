@@ -12,8 +12,9 @@ import { useAuthStore } from "../store/authStore.ts"
 
 const QuestionPage = () => {
    const { id } = useParams();
+   const registeredUsers = useAuthStore(state => state.registeredUsers)
    const question = mockQuestions.find(q => q.id == id);
-   const author = mockUsers.find(u => u.id == question?.authorId);
+   const author = registeredUsers.find(u => u.id == question?.authorId);
    const [answerContent, setAnswerContent] = useState('');
    const setQuestionId = useAnswersStore.getState().setQuestionId;
    const setAnswers = useAnswersStore.getState().setAnswers;

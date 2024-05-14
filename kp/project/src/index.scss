@@ -115,15 +115,15 @@ $blue: #3b82f6;
          width: 100%;
       }
    }
-      .question__title {
-         width: 100%;
-      }
-      .question__description {
-         width: 100%;
-      }      
-      .question__stats {
-         display: none;
-      }
+   .question__title {
+      width: 100%;
+   }
+   .question__description {
+      width: 100%;
+   }      
+   .question__stats {
+      display: none;
+   }
 }
 
 
@@ -305,3 +305,28 @@ $blue: #3b82f6;
    font-size: 16px;
    margin-bottom: 21px;
 }
+
+// new question form
+
+.newQuestion__form {
+   input {
+      margin-bottom: 21px;
+      &:placeholder-shown, &::placeholder {
+         display: flex;
+         align-items: flex-start;
+      }
+   }
+}
+
+@media(max-width: 670px) {
+
+   .newQuestion__form {
+      // padding: 0px 15px;
+      width: 400px;
+         input {
+            width: 100%;
+      }
+   }
+}
+
+
