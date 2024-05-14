@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CountryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::controller(CountryController::class)->group(function () {
+    Route::get('/all', 'getAll');
+    Route::get('/{id}', 'getOne');
+    Route::post('/new', 'addCountry');
+    Route::put('/edit/{id}', 'editCountry');
+    Route::delete('/del/{id}', 'deleteCountry');
+
 });
