@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{addQuestion}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{e}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{any}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{e}\PYG{p}{.}\PYG{n+nx}{preventDefault}\PYG{p}{()}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{newQuestion}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{TQuestion}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{         }\PYG{n+nx}{id}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{uuid}\PYG{p}{(),}
+\PYG{+w}{         }\PYG{n+nx}{title}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{questionCreds.title}\PYG{p}{,}
+\PYG{+w}{         }\PYG{n+nx}{description}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{questionCreds.content}\PYG{p}{,}
+\PYG{+w}{         }\PYG{n+nx}{tags}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{questionCreds.category.split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{p}{),}
+\PYG{+w}{         }\PYG{n+nx}{authorId}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{currentUser}\PYG{o}{!}\PYG{p}{.}\PYG{n+nx}{id}\PYG{p}{,}
+\PYG{+w}{         }\PYG{n+nx}{date}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{new}\PYG{+w}{ }\PYG{n+nb}{Date}\PYG{p}{().}\PYG{n+nx}{toLocaleString}\PYG{p}{(),}
+\PYG{+w}{         }\PYG{n+nx}{views}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{0}\PYG{p}{,}
+\PYG{+w}{         }\PYG{n+nx}{comments}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{0}\PYG{p}{,}
+\PYG{+w}{         }\PYG{n+nx}{upvotes}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kt}{0}\PYG{p}{,}
+\PYG{+w}{         }\PYG{n+nx}{answers}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[]}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{c+c1}{//@ts\PYGZhy{}ignore}
+\PYG{+w}{      }\PYG{n+nx}{setQuestions}\PYG{p}{([...}\PYG{n+nx}{questions}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{newQuestion}\PYG{p}{])}
+\PYG{+w}{      }\PYG{n+nx}{navigate}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{   }\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

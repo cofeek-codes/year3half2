@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+     \PYG{err}{\PYGZlt{}}\PYGZgt{}
+         \PYG{p}{\PYGZlt{}}\PYG{n+nt}{div} \PYG{n+na}{className}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}header\PYGZus{}\PYGZus{}auth\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+            \PYGZob{}typeof localUser === \PYGZsq{}undefined\PYGZsq{} ? (
+               \PYG{err}{\PYGZlt{}}\PYGZgt{}
+                  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{className}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}btn\PYGZus{}\PYGZus{}register\PYGZdq{}}\PYG{p}{\PYGZgt{}}
+                     \PYG{p}{\PYGZlt{}}\PYG{n+nt}{img} \PYG{n+na}{alt}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}user\PYGZhy{}plus\PYGZdq{}} \PYG{n+na}{src}\PYG{o}{=}\PYG{l+s}{\PYGZob{}images.UserPlus\PYGZcb{}} \PYG{p}{/\PYGZgt{}}
+                     \PYG{p}{\PYGZlt{}}\PYG{n+nt}{Link} \PYG{n+na}{to}\PYG{o}{=}\PYG{l+s}{\PYGZob{}\PYGZsq{}/auth/register\PYGZsq{}\PYGZcb{}}\PYG{p}{\PYGZgt{}}
+                        \PYG{p}{\PYGZlt{}}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}Регистрация\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{span}\PYG{p}{\PYGZgt{}}
+                     \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{Link}\PYG{p}{\PYGZgt{}}
+                  \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+                  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{Link} \PYG{n+na}{to}\PYG{o}{=}\PYG{l+s}{\PYGZob{}\PYGZsq{}/auth/login\PYGZsq{}\PYGZcb{}}\PYG{p}{\PYGZgt{}}
+                     \PYG{p}{\PYGZlt{}}\PYG{n+nt}{button} \PYG{n+na}{className}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}btn\PYGZus{}\PYGZus{}login\PYGZdq{}}\PYG{p}{\PYGZgt{}}Вход\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{button}\PYG{p}{\PYGZgt{}}
+                  \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{Link}\PYG{p}{\PYGZgt{}}
+               \PYG{err}{\PYGZlt{}}/\PYGZgt{}
+            )
+\end{Verbatim}

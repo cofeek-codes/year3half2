@@ -1,0 +1,21 @@
+\begin{minted}{typescript}
+    const register = (e: any) => {
+      e.preventDefault()
+      let candidate = registeredUsers!.find(u => u.email == creds.email)
+      if (candidate) {
+         setLoginError(true)
+      } else {
+         let newUser: TUser = {
+            id: uuid(),
+            avatar: images.NoAvatar,
+            email: creds.email,
+            lastOnline: new Date().toLocaleString(),
+            name: creds.name,
+            password: creds.password,
+            questionsIds: []
+         }
+         registerToStorage(newUser)!
+         navigate('/')
+      }
+   }
+  \end{minted}
