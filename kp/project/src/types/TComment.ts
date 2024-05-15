@@ -1,7 +1,7 @@
 import { TUser } from "./TUser"
 
 export type TAnswer = {
-   questionId: number,
+   questionId: number | string,
    author: TUser,
    content: string,
    time: string

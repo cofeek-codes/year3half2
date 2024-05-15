@@ -3,6 +3,7 @@ import HeaderBurger from "./HeaderBurger";
 import { useAuthStore } from "../../store/authStore";
 import { TUser } from "../../types/TUser";
 import { useEffect, useState } from "react";
+import { images } from "../../utils/imageLoader";
 
 const HeaderAuth = () => {
    const storeUser = useAuthStore(state => state.authedUser);
@@ -24,7 +25,7 @@ const HeaderAuth = () => {
             {typeof localUser === 'undefined' ? (
                <>
                   <button className="btn__register">
-                     <img alt="user-plus" src="/src/assets/user-plus.png" />
+                     <img alt="user-plus" src={images.UserPlus} />
                      <Link to={'/auth/register'}>
                         <span>Регистрация</span>
                      </Link>
@@ -36,7 +37,7 @@ const HeaderAuth = () => {
             ) : (
                <>
                   <button className="btn__register">
-                     <img alt="user-plus" src="/src/assets/user-plus.png" />
+                     <img alt="user-plus" src={images.UserPlus} />
                      <Link to={'/newquestion'}>
                         <span>Задать вопрос</span>
                      </Link>

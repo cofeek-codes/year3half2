@@ -1,4 +1,3 @@
-import AuthFromTitle from "../components/Auth/AuthFromTitle"
 import RegisterForm from "../components/Auth/RegisterForm"
 import AuthLayout from "../layouts/AuthLayout"
 import { images } from "../utils/imageLoader"

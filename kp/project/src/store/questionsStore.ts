@@ -8,14 +8,14 @@ type State = {
 };
 
 
-const initialState: State = {
+const initialState: Partial<State> = {
    questions: mockQuestions
 };
 
-export const useQuestionsStore = create<State>((set) => ({
+export const useQuestionsStore = create<Partial<State>>((set) => ({
    ...initialState,
    setQuestions: (q: TQuestion[]) => {
-      set((state) => ({ questions: q }));
+      set(() => ({ questions: q }));
       console.log('[STORE]: Questions updated:', q);
    }
 }))

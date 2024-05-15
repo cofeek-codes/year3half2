@@ -1,5 +1,4 @@
 import React from "react"
-import { mockUsers } from "../../mock/MockUsers"
 import { images } from "../../utils/imageLoader"
 import { Link } from "react-router-dom"
 import { useAuthStore } from "../../store/authStore"
@@ -7,9 +6,8 @@ import { TQuestion } from "../../types/TQuestion"
 import Markdown from "react-markdown"
 
 const Question = ({ question }: { question: TQuestion }) => {
-   const authedUser = useAuthStore(state => state.authedUser)
    const registeredUsers = useAuthStore(state => state.registeredUsers)
-   const user = registeredUsers.find(u => u.id === question.authorId)!
+   const user = registeredUsers!.find(u => u.id === question.authorId)!
    return <div className="question__wrapper">
       <Link to={`/question/${question.id}`}>
          <div className="px-[30px] py-[25px] bg-white rounded-[5px] shadow border border-gray-200 flex-col justify-start items-start gap-[15px] inline-flex mb-[23px]">

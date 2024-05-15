@@ -1,5 +1,5 @@
 export type TUser = {
-   id: number,
+   id: number | string,
    avatar: string,
    name: string
    lastOnline: string

@@ -1,4 +1,4 @@
-import { Link, redirect, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import AuthFromTitle from "./AuthFromTitle"
 import { useState } from "react"
 import { useAuthStore } from "../../store/authStore"
@@ -13,10 +13,10 @@ type TCreds = {
 const LoginForm = () => {
    const [creds, setCreds] = useState<TCreds>({ email: '', password: '' })
    const [loginError, setLoginError] = useState<boolean>(false)
-   const loginToStorage = useAuthStore.getState().login
-   const registeredUsers = useAuthStore.getState().registeredUsers
+   const loginToStorage = useAuthStore.getState().login!
+   const registeredUsers = useAuthStore.getState().registeredUsers!
    const navigate = useNavigate();
-   const login = (e) => {
+   const login = (e: any) => {
       e.preventDefault()
       console.log('current login creds')
       console.log(creds)
@@ -25,11 +25,11 @@ const LoginForm = () => {
       let debugUser = mockUsers[faker.number.int(2)]
       console.log(debugUser.email + " " + debugUser.password)
       console.log('-----------------------------------------')
-      let candidate = registeredUsers.find(u => (u.email == creds.email) && (u.password == creds.password)) // login candidate
+      let candidate = registeredUsers!.find(u => (u.email == creds.email) && (u.password == creds.password)) // login candidate
       if (!candidate) {
          setLoginError(true)
       } else {
-         loginToStorage(candidate)
+         loginToStorage(candidate)!
          navigate('/')
       }
    }

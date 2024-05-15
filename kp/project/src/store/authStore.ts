@@ -7,28 +7,29 @@ type State = {
    authedUser: TUser | undefined // possibly undefined instead of null
    login: (user: TUser | undefined) => void
    register: (user: TUser | undefined) => void
-   logout: (user: TUser) => void
+   logout: () => void
 };
 
-const initialState: State = {
+const initialState: Partial<State> = {
    registeredUsers: mockUsers,
    authedUser: undefined,
 }
 
-export const useAuthStore = create<State>((set) => ({
+export const useAuthStore = create<Partial<State>>((set) => ({
    ...initialState,
 
-   login: (user: TUser) => {
-      set(state => ({ authedUser: user }))
+   login: (user: TUser | undefined) => {
+      set(() => ({ authedUser: user }))
       console.log('[STORE]: user logged in:', user);
    },
-   register: (user: TUser) => {
+   register: (user: TUser | undefined) => {
+      //@ts-ignore
       set(state => ({ authedUser: user, registeredUsers: [...state.registeredUsers, user] }))
       console.log('[STORE]: registered user added:', user);
    },
 
    logout: () => {
-      set(state => ({ authedUser: undefined }))
+      set(() => ({ authedUser: undefined }))
       console.log('[STORE]: user logged out');
    }
 

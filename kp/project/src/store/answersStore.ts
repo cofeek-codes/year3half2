@@ -6,24 +6,25 @@ type State = {
    answers: TAnswer[];
    questionId: number;
    setAnswers: (answers: TAnswer[]) => void;
-   setQuestionId: (id: number) => void;
+   setQuestionId: (id: string) => void;
 };
 
-const initialState: State = {
+const initialState: Partial<State> = {
    questionId: 0,
    answers: []
 };
 
-export const useAnswersStore = create<State>((set) => ({
+export const useAnswersStore = create<Partial<State>>((set) => ({
    ...initialState,
    setAnswers: (answers: TAnswer[]) => {
-      set((state) => ({ answers: answers }));
+      set(() => ({ answers: answers }));
       console.log('[STORE]: Answers updated:', answers);
    },
-   setQuestionId: (id: number) => {
-      set((state) => ({
+   setQuestionId: (id: string) => {
+      //@ts-ignore
+      set(() => ({
          questionId: id,
-         answers: mockQuestions[id].answers
+         answers: mockQuestions[+id].answers
       }));
       console.log('[STORE]: questionId updated:', id);
    },

@@ -3,7 +3,6 @@ import RootLayout from "../layouts/RootLayout"
 import Markdown from "react-markdown"
 import { mockQuestions } from "../mock/mockQuestions"
 import { Avatar } from "@chakra-ui/react"
-import { mockUsers } from "../mock/MockUsers"
 import { images } from "../utils/imageLoader"
 import { useEffect, useState } from "react"
 import { TAnswer } from "../types/TComment"
@@ -15,54 +14,55 @@ const QuestionPage = () => {
    const registeredUsers = useAuthStore(state => state.registeredUsers)
    const currentUser = useAuthStore(state => state.authedUser)
    const question = mockQuestions.find(q => q.id == id);
-   const author = registeredUsers.find(u => u.id == question?.authorId);
+   const author = registeredUsers!.find(u => u.id == question?.authorId);
    const [answerContent, setAnswerContent] = useState('');
-   const setQuestionId = useAnswersStore.getState().setQuestionId;
-   const setAnswers = useAnswersStore.getState().setAnswers;
+   const setQuestionId = useAnswersStore.getState().setQuestionId!
+   const setAnswers = useAnswersStore.getState().setAnswers!
    const answers = useAnswersStore((state) => state.answers);
    const authedUser = useAuthStore((state) => state.authedUser)
-   const [localAnswers, setLocalAnswers] = useState<TAnswer[]>(answers);
+   const [localAnswers, setLocalAnswers] = useState(answers);
 
    useEffect(() => {
-      setQuestionId(id)
+      setQuestionId(String(id))!
    }, [])
 
    useEffect(() => {
-      setLocalAnswers(answers);
+      setLocalAnswers(answers!);
    }, [answers]);
 
-   const addAnswer = (e) => {
+   const addAnswer = (e: any) => {
       e.preventDefault();
       let newAnswer: TAnswer = {
-         author: authedUser,
+         author: authedUser!,
          content: answerContent,
          likes: 0,
          dislikes: 0,
-         questionId: id,
+         questionId: String(id),
          time: new Date().toLocaleString(),
       };
-      setQuestionId(id);
-      setAnswers([newAnswer, ...localAnswers]);
+      setQuestionId(String(id))!
+      //@ts-ignore
+      setAnswers([newAnswer, ...localAnswers])!
    };
 
    return <RootLayout>
       <div className="quesiton__wrapper">
          <div className="user__info">
             <div className="user__avatar">
-               <Avatar name={author.name} src={author?.avatar} />
+               <Avatar name={author!.name} src={author!.avatar} />
             </div>
             <div className="user__name">
                <div className="name">
-                  @{author.name}
+                  @{author!.name}
                </div>
                <div className="time">
-                  {question.date}
+                  {question!.date}
                </div>
             </div>
          </div>
          <div className="question__info">
             <div className="question__title">
-               {question.title}
+               {question!.title}
             </div>
             <div className="question__description">
                <Markdown>
@@ -78,7 +78,7 @@ const QuestionPage = () => {
                   <input onChange={e => setAnswerContent(e.target.value)} name="" type="text" placeholder="Type here your wise suggestion" />
                   <div className="answer__form__buttons">
                      <button type="submit">Отправить</button>
-                     <button type="clear">Очистить</button>
+                     <button type="reset">Очистить</button>
                   </div>
                </form>
             </div>
@@ -88,7 +88,7 @@ const QuestionPage = () => {
             </div>
          )}
          <div className="question__answers">
-            {localAnswers.map((a, i) => (
+            {localAnswers!.map((a, i) => (
                <div key={i} className="question__answer">
                   <div className="answer__user">
                      <div className="au__avatar">

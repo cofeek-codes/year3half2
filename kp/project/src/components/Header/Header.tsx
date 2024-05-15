@@ -1,5 +1,4 @@
 import HeaderAuth from "./HeaderAuth";
-import HeaderBurger from "./HeaderBurger";
 import HeaderTitle from "./HeaderTitle";
 import Logo from "./Logo";
 

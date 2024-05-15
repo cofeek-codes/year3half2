@@ -1,7 +1,7 @@
 import { images } from "../../utils/imageLoader"
 
 const QuestionFilters = () => {
-   const selectFilter = (event) => {
+   const selectFilter = (event: any) => {
       // console.log(event)
       // console.log(event.target.classList)
       const filters = Array.from(document.querySelectorAll('.selectable'))
@@ -9,7 +9,7 @@ const QuestionFilters = () => {
 
       const chosenFilter = filters.find(f => f == event.target)
       console.log(chosenFilter!)
-      chosenFilter.classList.add('selected')
+      chosenFilter!.classList.add('selected')
       console.log('DEBUG: selected added from chosen filter')
       console.log(chosenFilter!.classList)
       const rest = filters.filter(f => f != event.target)

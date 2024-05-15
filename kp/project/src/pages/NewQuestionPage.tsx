@@ -15,11 +15,10 @@ const NewQuestionPage = () => {
    const currentUser = useAuthStore(state => state.authedUser)
    const questions = useQuestionsStore(state => state.questions)
    const setQuestions = useQuestionsStore.getState().setQuestions
-   const updateUser = useAuthStore(state => state.login)
-   const [questionCreds, setQuestionCreds] = useState<TQuestionCreds>({})
+   const [questionCreds, setQuestionCreds] = useState<TQuestionCreds>({} as TQuestionCreds)
    const navigate = useNavigate()
 
-   const addQuestion = (e) => {
+   const addQuestion = (e: any) => {
       e.preventDefault()
       console.log("initial new question creds");
       console.log(questionCreds);
@@ -29,13 +28,14 @@ const NewQuestionPage = () => {
          title: questionCreds.title,
          description: questionCreds.content,
          tags: questionCreds.category.split(', '),
-         authorId: currentUser.id,
+         authorId: currentUser!.id,
          date: new Date().toLocaleString(),
          views: 0,
          comments: 0,
          upvotes: 0,
          answers: []
       }
+      //@ts-ignore
       setQuestions([...questions, newQuestion])
       navigate('/')
    }

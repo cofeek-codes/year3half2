@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter, redirect, useNavigate } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, redirect } from "react-router-dom";
 import IndexPage from "./pages/IndexPage";
 import NewQuestionPage from "./pages/NewQuestionPage";
-import Root from "./pages/Root";
 import "./index.scss";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
@@ -31,9 +30,8 @@ const router = createBrowserRouter([
    {
       path: "/auth/logout",
       loader: async () => {
-         const user = useAuthStore.getState().authedUser
-         const logout = useAuthStore.getState().logout
-         logout()
+         const logout = useAuthStore.getState().logout!
+         logout()!
          return redirect('/')
       }
    },
