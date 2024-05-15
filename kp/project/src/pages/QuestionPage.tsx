@@ -13,6 +13,7 @@ import { useAuthStore } from "../store/authStore.ts"
 const QuestionPage = () => {
    const { id } = useParams();
    const registeredUsers = useAuthStore(state => state.registeredUsers)
+   const currentUser = useAuthStore(state => state.authedUser)
    const question = mockQuestions.find(q => q.id == id);
    const author = registeredUsers.find(u => u.id == question?.authorId);
    const [answerContent, setAnswerContent] = useState('');
@@ -69,16 +70,23 @@ const QuestionPage = () => {
                </Markdown>
             </div>
          </div>
-         <div className="question__answer__form">
-            <div className="question__answer__heading">Предложить Решение</div>
-            <form onSubmit={e => addAnswer(e)}>
-               <input onChange={e => setAnswerContent(e.target.value)} name="" type="text" placeholder="Type here your wise suggestion" />
-               <div className="answer__form__buttons">
-                  <button type="submit">Отправить</button>
-                  <button type="clear">Очистить</button>
-               </div>
-            </form>
-         </div>
+         {typeof currentUser !== 'undefined' ? (
+
+            <div className="question__answer__form">
+               <div className="question__answer__heading">Предложить Решение</div>
+               <form onSubmit={e => addAnswer(e)}>
+                  <input onChange={e => setAnswerContent(e.target.value)} name="" type="text" placeholder="Type here your wise suggestion" />
+                  <div className="answer__form__buttons">
+                     <button type="submit">Отправить</button>
+                     <button type="clear">Очистить</button>
+                  </div>
+               </form>
+            </div>
+         ) : (
+            <div className="question__answer__no-user">
+               Авторизуйтесь чтобы опубликовать ответ
+            </div>
+         )}
          <div className="question__answers">
             {localAnswers.map((a, i) => (
                <div key={i} className="question__answer">
