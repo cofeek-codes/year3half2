@@ -36,7 +36,7 @@ const RegisterForm = () => {
       } else {
          let newUser: TUser = {
             id: uuid(),
-            avatar: images.Avatar1, // TODO: change to placeholder
+            avatar: images.NoAvatar,
             email: creds.email,
             lastOnline: new Date().toLocaleString(),
             name: creds.name,

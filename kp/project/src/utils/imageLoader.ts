@@ -12,6 +12,7 @@ import newIcon from '/src/assets/clock.svg'
 import AuthImg from '/src/assets/authImg.png'
 import Likes from '/src/assets/thumbs-up.svg'
 import Dislikes from '/src/assets/thumbs-down.svg'
+import NoAvatar from '/src/assets/no-avatar.png'
 
 export const images = {
    Avatar1,
@@ -27,4 +28,5 @@ export const images = {
    AuthImg,
    Likes,
    Dislikes,
+   NoAvatar,
 }
