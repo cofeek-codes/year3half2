@@ -1,0 +1,88 @@
+
+/'
+ ' variant 1
+ '/
+
+
+@startuml
+title: Вариант 1: Фотостудия
+hide circle
+
+entity Service_Document {
+   id: int
+   ---
+   client: Client
+   date: DateTime
+   services: Service[]
+   price: int
+}
+
+entity Client {
+   id: int
+   ---
+   name: string
+   surname: string
+}
+
+entity Service {
+   id: int
+   ---
+   price: float
+   title: string
+   materials: Material[]
+}
+
+entity Material {
+   id: int
+   ---
+   brand: Brand
+   title: string
+}
+
+entity Material_Order {
+   id: int
+   ---
+   materials: Material[]
+   amount: int
+   price: int
+   date: DateTime
+}
+
+entity Service_Service_Document {
+   id: int
+   ---
+   document_id: int
+   service_id: int
+}
+
+entity Utilization {
+   id: int
+   ---
+   date: DateTime
+   materials: Materials[]
+}
+
+/'
+ ' service document
+'/
+
+Service_Document }|--|| Service: Записывается
+Client }|--|| Service_Document: Заказывает
+
+/'
+ ' material order
+'/
+
+Material_Order }|--|| Material: Входит
+
+/'
+ ' one to many 
+'/
+Service_Service_Document }|--|| Service: Содержится
+Service_Service_Document }|--|| Service_Document: Оформляется
+
+Service }|--|| Material: Используется
+
+Utilization }|--|| Material: Утилизируются
+
+@enduml
