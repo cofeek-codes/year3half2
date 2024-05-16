@@ -92,7 +92,7 @@
   ORDER BY title LIMIT 100 OFFSET 2000;
 #+end_src
 
-*ВЫвод следующей страницы:*
+*Вывод следующей страницы:*
 
 #+begin_src sql
   SELECT * FROM movies
