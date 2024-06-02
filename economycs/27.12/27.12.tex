@@ -1,0 +1,147 @@
+% Created 2024-06-02 Sun 19:22
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[russian]{babel}
+\author{Кормышев Егор ИСиП-301}
+\date{27.12}
+\title{Показатели эффективного использования ОФ}
+\hypersetup{
+ pdfauthor={Кормышев Егор ИСиП-301},
+ pdftitle={Показатели эффективного использования ОФ},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={Russian}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\begin{itemize}
+\item \(K_\text{вв}\) - коэффицент ввода (поступления) - учитывает затраты на модернизацию \\[0pt]
+\end{itemize}
+
+\begin{math}
+K_\text{вв} = \frac{C_{\text{п}}\text{вв}}{C_{\text{ОФ на к.г}}}
+\end{math}
+
+\begin{itemize}
+\item \(K_\text{обн}\) - коэффицент обновления - учитывает  внедренные ОФ \\[0pt]
+\end{itemize}
+
+
+\begin{math}
+K_\text{обн} = \frac{C_{\text{п}}\text{вв (новые)}}{C_{\text{ОФ на к.г}}}
+\end{math}
+
+\begin{itemize}
+\item \(K_\text{выб}\) - коэффицент выбытия
+\end{itemize}
+
+
+\begin{math}
+K_\text{выб} = \frac{C_{\text{п}}\text{выб}}{C_{\text{ОФ на н.г}}}
+\end{math}
+
+
+\begin{itemize}
+\item \(K_\text{л}\) - коэффицент ликвидации - продажи ОФ
+\end{itemize}
+
+
+\begin{math}
+K_\text{л} = \frac{C_{\text{п}}\text{ликв}}{C_{\text{ОФ на н.г}}}
+\end{math}
+
+
+\begin{itemize}
+\item \(K_\text{и}\) - коэффицент износа - доля износа ОФ на опр. дату
+\end{itemize}
+
+
+\begin{math}
+K_\text{и} = \frac{\sum \text{износа}}{C_{\text{ОФ}}}
+\end{math}
+
+
+\begin{itemize}
+\item \(K_\text{г}\) - коэффицент годности - доля остаточной строймотсти ОФ не перенесенная на себестоймость продукции
+\end{itemize}
+
+
+\begin{math}
+ K_{\text{г}} = \frac{C_{o}}{C_{n}\text{ОФ}} \  \text{или} \   K_{\text{г}} = 1 - K_{\text{л}}
+\end{math}
+
+\begin{itemize}
+\item \(K_\text{э}\) - коэффицент экстенсивной нагрузки оборудования - фактически отработанное оборудованием время
+\end{itemize}
+
+\begin{math}
+  K_{\text{э}} = \frac{\text{Ф}_{\text{эф}}}{\text{Ф}_{\text{ном}}}
+\end{math}
+
+
+\begin{itemize}
+\item \(K_\text{и}\) - коэффицент интенсивной нагрузки оборудования
+\end{itemize}
+
+\begin{math}
+  K_{\text{э}} = \frac{\text{П}_{\text{пл}}}{\text{П}_{\text{пасп}}}
+\end{math}
+
+
+\begin{itemize}
+\item \(K_{\int}\) - коэффицент интегральный
+\end{itemize}
+
+\begin{math}
+  K_{\int} = K_{\text{э}} * K_{\text{п}}
+\end{math}
+
+
+\begin{itemize}
+\item \(K_{\text{см}}\) - коэффицент сменности - кол-во смен за 1 рабочий день
+\end{itemize}
+
+\begin{math}
+K_{\text{см}} = \frac{M_{1}+M_{2}+M_{n}}{M_{y}*t_{\text{р.д}}}
+\end{math}
+
+
+\begin{itemize}
+\item Ф - фондоотдача - кол-во продукции, выпущенной с каждого рубля ОФ
+\end{itemize}
+
+\begin{math}
+  \text{Ф} - \frac{\text{ВП}}{\overline{C}}
+\end{math}
+
+\begin{itemize}
+\item Ф' - фондоемкость - обратно-пропорционально фондоотдаче, сколько ОФ приходится на каждый рубль продукции
+\end{itemize}
+
+\begin{math}
+  \text{Ф'} = \frac{\overline{C}}{\text{ВП}} \ ; \   \text{Ф'} = \frac{1}{\text{Ф}}
+\end{math}
+
+\begin{itemize}
+\item Ф'' - фондовооруженность - обратно-пропорционально фондоотдаче, сколько ОФ приходится на каждый рубль продукции
+\end{itemize}
+
+\begin{math}
+  \text{Ф''} = \frac{\overline{C}}{P_{c}}
+\end{math}
+\end{document}

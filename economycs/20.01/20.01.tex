@@ -1,0 +1,104 @@
+% Created 2024-06-02 Sun 15:39
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[russian]{babel}
+\author{Кормышев Егор}
+\date{20 января}
+\title{Лекция 2. Основные фонды}
+\hypersetup{
+ pdfauthor={Кормышев Егор},
+ pdftitle={Лекция 2. Основные фонды},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={Russian}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\textbf{Основные фонды} - часть имущества, которая используется в качестве средств труда длительное время, не изменяя свои свойства и состояние \\[0pt]
+
+\textbf{Виды основных средств}:
+
+\begin{itemize}
+\item Производственные
+\item Непроизводственные
+\end{itemize}
+
+\textbf{Группы основных средств}:
+
+\begin{itemize}
+\item Здания
+\item Сооружения
+\item Хоз.инвентарь
+\item Инструменты
+\end{itemize}
+и т.д.
+
+\section{Виды стоймостей основных фондов:}
+\label{sec:org98cee46}
+
+\begin{enumerate}
+\item Первоначальная стоймость включает в себя затраты на приобретение единицы фонда с учетом затрат на транспортировку, монтаж и установку
+
+$C_{\text{перв}} = Ц_{\text{пр}} * (1+a_{\text{трансп}} + \text{ам.иу}) * A_{\text{прин}}$
+, где \\[0pt]
+ a\textsubscript{\text{трансп}} - коэфицент, учитывающий транспортные затраты = 0,06 - не более 6\% от цены приобретения
+
+\text{ам.иу} - коэфицент, учитывающий затраты на монтаж и устновку = 0,07 - не более 7\%
+
+A\textsubscript{\text{прин}} - принятые единицы оборудования
+
+\item Восстановительная стоймость включает в себя затраты на выпуск единицы фонда в период переоценки
+
+\item Остаточная стоймость - часть основных фондов, которые не перенесены на готовую продукцию в виде амортизации
+
+$C_{\text{ост}} = C_{\text{перв}} - \sum A * T$
+, где \\[0pt]
+\(\sum\) A - сумма амортизациионных отчислений \\[0pt]
+T - период эксплуатации
+
+\item Среднегодовая стоймость - стоймость - учитывается движение средств в ходе реализации и приобретения ОФ
+
+\begin{math}
+  \overline{C} = C_{\text{н.г}} + \frac{\text{Св.в} * t_1}{12} - \frac{С_{\text{Выб}} * t_2}{12}
+\end{math}
+, где
+
+C\textsubscript{\text{н.г}} - стоймость ОФ на начало года \\[0pt]
+C\textsubscript{\text{вв}} - стоймость введенных ОФ \\[0pt]
+C\textsubscript{\text{выб}} - стоймость выбывших ОФ \\[0pt]
+t - период эксплуатации фонда в течении года \\[0pt]
+\end{enumerate}
+
+
+\begin{enumerate}
+\item Балансовая стоймость - стоймость, по которой объект учитывается в балане предприятия
+\end{enumerate}
+
+\begin{center}
+\textbf{Стоймость ОФ на конец года}
+\end{center}
+
+$C_{\text{к}} = C_{\text{н.г}} + C_{\text{вв}} - C_{\text{выб}}$
+, где \\[0pt]
+
+C\textsubscript{\text{н.г}} - стоймость ОФ на начало года
+
+C\textsubscript{\text{вв}} - стоймость введенных ОФ
+
+C\textsubscript{\text{выб}} - стоймость выбывших ОФ
+\end{document}

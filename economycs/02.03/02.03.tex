@@ -1,0 +1,57 @@
+% Created 2024-06-03 Mon 00:57
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[russian]{babel}
+\author{Кормышев Егор ИСиП-301}
+\date{02.03}
+\title{Нормы труда}
+\hypersetup{
+ pdfauthor={Кормышев Егор ИСиП-301},
+ pdftitle={Нормы труда},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={Russian}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\textbf{Норма времени (Н\textsubscript{t})} - устанавливается в минутах или часах на одно изделие
+
+$H_t = t_\text{п} + t_\text{оп} + t_\text{об} + t_\text{п}$ \\
+$T_\text{шт} = t_\text{оп} + t_\text{об} * t_\text{п}$
+
+, где
+
+t\textsubscript{п} - время подготовки
+
+t\textsubscript{оп} - основное время
+
+t\textsubscript{об} - время обслуживания \\[0pt]
+
+\textbf{Норма выроботки (H\textsubscript{в})} - кол-во продукции в ед. времени \\[0pt]
+
+\begin{math}
+H_\text{в} = \frac{1}{H_t}
+\end{math}
+\\[0pt]
+
+\textbf{Норма обслуживания (H\textsubscript{обс})} - кол-во оборудования, которое должен обслужить 1 человек \\[0pt]
+
+\textbf{Норма управляемости (H\textsubscript{у})} - оптимальное кол-во персонала \\[0pt]
+
+\textbf{Норма численности (H\textsubscript{ч})} - устанавливается для некоторых категорий работников, если нет возможности рассчитать норму по другим способам
+\end{document}

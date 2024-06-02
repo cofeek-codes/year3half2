@@ -1,0 +1,108 @@
+% Created 2024-06-03 Mon 01:57
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage[russian]{babel}
+\author{Кормышев Егор ИСиП-301}
+\date{09.03}
+\title{Производительность труда}
+\hypersetup{
+ pdfauthor={Кормышев Егор ИСиП-301},
+ pdftitle={Производительность труда},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.15)}, 
+ pdflang={Russian}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\textbf{Производительность труда} - кол-во произведенной продукции в ед. раб. времени или затраиты труда на ед. продукции (трудоемкость)
+
+\begin{center}
+\textbf{Виды производительности труда}
+\end{center}
+
+\begin{itemize}
+\item Часовая - кол-во продукции, произведенной работником за час работы
+\item Дневная - кол-во продукции, произведенной работником за 1 рабочий день
+\item Месячная (годовая) - отношение кол-ва произведенной продукции за месяц (год) к кол-ву сотрудников в этом периоде
+\end{itemize}
+
+Производительность труда измеряемую объемом произведенной продукции за ед. времени называют \textbf{выработкой} \\[0pt]
+
+$\text{В} = \frac{\text{ВП}}{t} \ \text{или} \ \text{В} = \frac{\text{ВП}}{P_C}$
+\\
+
+Н\textsubscript{в} - выработка
+
+ВП - объем произведенной продукции
+
+t - затраты на раб.вр. на производство продукции
+
+P\textsubscript{c} - средняя численность рабочих
+
+Зависимость между трудоемкостью (\triangle T) и ростом выработки (\triangle \text{П}) определяется по формуле: \\[0pt]
+
+\begin{math}
+  \triangle \text{П} = [\frac{\triangle T}{100 * \triangle \text{П}}]
+\end{math}
+
+
+\begin{math}
+  \triangle T = [\frac{\triangle \text{П}}{\triangle \text{П} * 100}]
+\end{math}
+
+Трудоемкость продукции представляет собой затраты живого труда на производство ед. продукции. Показатель трудоемкости (Q) устанавливает прямую зависимость между объемом продукции и трудовыми затратами \\[0pt]
+
+$Q = \frac{t}{\text{ВП}}$
+, где \\[0pt]
+
+t - время, затраченное на производство на производство продукции (человеко-часы)
+
+ВП - выпуск продукции
+
+\begin{center}
+Виды трудоемкости
+\end{center}
+
+\begin{itemize}
+\item Технологическая (Q\textsubscript{тех}) - затраты труда основных рабочих-сдельщиков (t\textsubscript{сд}) и рабочих-повременьщиков (t\textsubscript{повр}) \\[0pt]
+
+$Q_{\text{тех}} = t_{\text{сд}} + t_{\text{повр}}$
+\end{itemize}
+
+
+\begin{itemize}
+\item Обслуживания производства (Q\textsubscript{обс}) - затраты труда основных и вспомогательных рабочих \\[0pt]
+
+$Q_{\text{обс}} = t_{\text{вспом}} + t_{\text{всп}}$
+
+\item Производственная (Q\textsubscript{пр}) - затраты труда всех рабочих \\[0pt]
+
+$Q_{\text{пр}} = t_{\text{тех}} + t_{\text{обс}}$
+
+\item Управления (Q\textsubscript{у}) - затраты труда служащих общезаводских служб предприятия \\[0pt]
+
+$Q_{\text{у}} = t_{\text{слу}} + t_{\text{зав}}$
+\end{itemize}
+
+
+\begin{itemize}
+\item Полная (Q\textsubscript{полн}) - затраты труда всех категорий рабочих \\[0pt]
+
+$Q_{\text{полн}} = t_{\text{обс}} + t_{\text{тех}} + t_{\text{у}}$
+\end{itemize}
+\end{document}
