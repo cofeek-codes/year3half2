@@ -1,0 +1,14 @@
+[
+    {
+        "fruits": [
+            "banana",
+            "apple",
+            "orange"
+        ],
+        "vegetables": [
+            "carrot",
+            "cabbage",
+            "potato"
+        ]
+    }
+]

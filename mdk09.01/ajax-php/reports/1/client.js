@@ -1,27 +1,19 @@
+let searchInput = document.getElementById('search__input')
 let searchResult = document.getElementById('search__input').value
 let searchButton = document.getElementById('search__btn')
 let outputList = document.getElementById('output')
 
-getData = () => {
-    let url = new URL('http://localhost:8080/ajax.php')
-    url.search = new URLSearchParams({ search: searchResult })
-    let extractedData
-    fetch(url, {
-        headers: { 'Content-Type': 'application/json' }
-    })
-        .then(res => {
-            if (!res.ok)
-                throw new Error('request error')
-            return res.json()
-        }).then(data => {
-            extractedData = Object.values(data)
-            console.log(extractedData)
-            extractedData.forEach(e => {
-                outputList.innerHTML += `<li>${e}</li>`
+
+searchInput.onkeyup = function () {
+    if (searchInput.value != '') {
+        fetch('./data.json').then(res => res.json()).then(data => {
+            data.forEach(el => {
+
+                if (el.name.includes(searchInput.value)) {
+                    outputList.innerHTML += `<li>${el.name}</li>`
+                }
             })
         })
 
+    }
 }
-
-searchButton.onclick = getData
-
