@@ -1,0 +1,81 @@
+#+TITLE: 20 Практическая работа Оптимизация кода веб-приложений
+#+AUTHOR: Кормышев Егор
+#+DATE: 17.06.24
+#+LANGUAGE: ru
+#+LaTeX_HEADER: \usepackage[russian]{babel}
+
+1) Создать переменную numberOfFilms и в нее поместить ответ от пользователя на вопрос: "Сколько фильмов вы уже посмотрели"?
+
+   #+begin_src javascript     
+     let numberOfFilms = prompt("Сколько фильмов мы уже посмотрели?")
+     personalMovieDB.count = numberOfFilms
+      #+end_src
+   [[./screens/1.png]]
+      
+
+
+
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+- count - сюда передается ответ на первый вопрос;
+- movies - в это свойство поместить пустой объект;
+- actors - тоже поместить пустой объект;
+- genres - сюда поместить пустой массив;
+- private - в это свойство поместить boolean (логическое) значение false;
+
+   #+begin_src javascript     
+     
+let personalMovieDB = {
+    count: 0, // number
+    movies: {}, // ??
+    actors: {}, // ??
+    genres: [], // string[]
+    isPrivate: false
+}
+ 
+    #+end_src
+      
+- private - в это свойство поместить boolean (логическое) значение false;
+3) Задайте пользователю два раза вопросы:
+- "Один из последних просмотренных фильмов?"
+- "На сколько оцените его?"
+Ответы стоит поместить в отдельные переменные.
+
+#+begin_src javascript
+  function askQuestions() {
+    let lastSeen;
+    let lastRate;
+
+    do {
+        lastSeen = prompt("Какой фильм вы посмотрели последним?");
+        lastRate = prompt("На сколько оцените его?");
+
+        if ((lastSeen.length >= 0 && lastSeen.length <= 50) && (lastRate.length >= 0 && lastRate.length <= 50)) {
+            break;
+        } else {
+            alert("Пожалуйста, введите корректные значения от 0 до 50.");
+        }
+    } while (true);
+
+    return [lastSeen, lastRate];
+}
+#+end_src
+[[./screens/3.png]]
+[[./screens/4.png]]
+
+1) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции false (значит база данных НЕ приватная/частная/скрытая) - выводит в консоль главный объект программы.
+   #+begin_src javascript
+     function showMyDB() {
+    if (!personalMovieDB.isPrivate)
+        console.log(personalMovieDB)
+}
+   #+end_src
+
+2) Создать функцию =writeYourGenres()= в которой пользователь будет 3 раза отвечать на вопрос "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных =genres=
+   #+begin_src javascript
+     document.querySelector('button').onclick = function () {
+    for (let i = 1; i < 4; i++) {
+        let genre = prompt(`Ваш любимый жанр под номером: ${i}`)
+        personalMovieDB.genres.push(genre)
+    }
+}
+   #+end_src
